@@ -1,10 +1,172 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html class="page" lang="en">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Форма отзыва сайта</title>
   </head>
-  <body>
-
+  <body class="page__body">
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img src="https://via.placeholder.com/102x84" alt="Логотип">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="#">
+                Главная
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a href="catalog.html">
+                Фото и видео
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a href="form.html">
+                Форма отзыва
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a href="https://htmlacademy.ru/study">
+                Html Academy
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="page-main">
+      <section class="introduction">
+        <div class="introduction-wrapper">
+          <h1 class="introduction__title">Оставьте свой отзыв</h1>
+          <p class="introduction__text">
+            Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о поснщённых вами достопримечательностях
+          </p>
+        </div>
+      </section>
+        <form class="review-form" method="post" name="form-review">
+          <fieldset class="review-form__part review-form__part--right">
+            <legend class="review-form__name" for="name">Представьтесь:</legend>
+            <ul class="review-form__initials initials">
+              <li class="initials__item">
+                <label class="initials__field-name" for="name">Имя*:</label>
+                <input class="initials__field" type="text" name="name-field" id="name" required>
+              </li>
+              <li class="initials__item">
+                <label class="initials__field-name" for="surname">Фамилия*:</label>
+                <input class="initials__field" type="text" name="surname-field" id="surname" required>
+              </li>
+              <li class="initials__item">
+                <label class="initials__field-name" for="patronymic">Отчество:</label>
+                <input class="initials__field" type="text" name="patronymic-field" id="patronymic">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="review-form__part">
+            <legend class="review-form__name">Контактная информация:</legend>
+            <ul class="review-form__contacts contacts">
+              <li class="contacts__item">
+                <label class="contacts__field-name" for="phone">Контактный телефон:</label>
+                <input class="contacts__field" type="tel" name="phone-field" id="phone">
+              </li>
+              <li class="contacts__item">
+                <label class="contacts__field-name" for="email">Электронная почта:</label>
+                <input class="contacts__field" type="email" name="email-field" id="email">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="review-form__part review-form__part--left">
+            <legend class="review-form__name">Ваше общее впечатление:</legend>
+            <ul class="review-form__impression impression">
+              <li class="impression__item">
+                <input class="impression__button" type="radio" name="impression-button" id="positiv-impression" value="Скорее положительное" checked>
+                <label class="impression__option" for="positiv-impression">Скорее положительное</label>
+              </li>
+              <li class="impression__item">
+                <input class="impression__button" type="radio" name="impression-button" id="negative-impression" value="Скорее отрицательное">
+                <label class="impression__option" for="negative-impression">Скорее отрицательное</label>
+              </li>
+              <li class="impression__item">
+                <input class="impression__button" type="radio" name="impression-button" id="indefinitely" value="Затрудняюсь ответить">
+                <label class="impression__option" for="indefinitely">Затрудняюсь ответить</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="review-form__part">
+            <legend class="review-form__name">Посещённые достопримечательности:</legend>
+            <ul class="review-form__attractions attractions">
+              <li class="attractions__item">
+                <input class="attractions__checkbox" type="checkbox" name="attraction" id="bridge" value="Мост Дьявола" checked>
+                <label class="attractions__option" for="bridge">Мост Дьявола</label>
+              </li>
+              <li class="attractions__item">
+                <input class="attractions__checkbox" type="checkbox" name="attraction" id="mountain" value="Гора-Колокол" checked>
+                <label class="attractions__option" for="mountain">Гора-Колокол</label>
+              </li>
+              <li class="attractions__item">
+                <input class="attractions__checkbox" type="checkbox" name="attraction" id="slide-park" value="Слайд-парк" checked>
+                <label class="attractions__option" for="slide-park">Слайд-парк</label>
+              </li>
+              <li class="attractions__item">
+                <input class="attractions__checkbox" type="checkbox" name="attraction" id="red-rocks" value="Красные скалы">
+                <label class="attractions__option" for="red-rocks">Красные скалы</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="review-form__part">
+            <legend class="review-form__name">Опишите свои эмоции:</legend>
+            <textarea class="review-form__comment" placeholder="Опишите подробно все свои восторги"></textarea>
+          </fieldset>
+          <button class="review-form__submit" type="submit">Отправить отзыв</button>
+        </form>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wraper">
+        <span class="page-footer__hashtag hashtag">#Visitsedona</span>
+        <div class="page-footer__socials socials">
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a class="socials__link socials__link--twitter" href="blank.html">
+                Twitter
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--facebook" href="blank.html">
+                Facebook
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--youtube" href="blank.html">
+                YouTube
+              </a>
+            </li>
+          </ul>
+        </div>
+        <p class="page-footer__developer developer">
+          Разработано
+          <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive">
+            Html Academy
+          </a>
+        </p>
+      </div>
+    </footer>
+    <section class="popup-failure">
+      <h2 class="popup-failure__title">Что-то пошло не так!</h2>
+      <p class="popup-failure__message">
+        Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+      </p>
+      <button class="popup-failure__close">ОК</button>
+    </section>
+    <section class="popup-success">
+      <h2 class="popup-success__title">Ваш отзыв отправлен!</h2>
+      <p class="popup-success__message">
+        Спасибо за ваше участие, ваш отзыв уже поступил к нам, в ближайшее время мы опубликуем его на сайте.
+      </p>
+      <div class="popup-success__buttom">
+        <button class="popup-success__close">Закрыть окно</button>
+      </div>
+    </section>
   </body>
 </html>
