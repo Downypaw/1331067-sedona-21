@@ -1,0 +1,19 @@
+.developer {
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: @text-bold-color;
+  position: relative;
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+.developer::before {
+  content: "";
+  position: absolute;
+  width: 26.9px;
+  height: 34.1px;
+  background: url("../img/htmlacademy.svg");
+  right: -35px;
+}

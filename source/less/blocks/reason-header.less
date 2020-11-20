@@ -1,0 +1,34 @@
+.reason-header {
+  background-color: @highlight-color;
+  color: @basic-color;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 34px;
+  padding-bottom: 40px;
+}
+
+.reason-header--brief {
+  background-color: @reason-brief-color;
+  border-bottom: 1px solid @border-color;
+
+  .reason-header__name {
+    color: @text-bold-color;
+  }
+
+  .reason-header__text,
+  .reason-header__number {
+    color: @text-color;
+  }
+}
+
+.reason-header__name {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.reason-header__text,
+.reason-header__number {
+  font-size: 14px;
+  line-height: 21px;
+}

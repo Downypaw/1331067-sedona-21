@@ -3,39 +3,42 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo">
-        <img src="https://via.placeholder.com/102x84" alt="Логотип">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a href="#">
-                Главная
-              </a>
-            </li>
-            <li class="main-nav__item">
-              <a href="catalog.html">
-                Фото и видео
-              </a>
-            </li>
-            <li class="main-nav__item">
-              <a href="form.html">
-                Форма отзыва
-              </a>
-            </li>
-            <li class="main-nav__item">
-              <a href="https://htmlacademy.ru/study">
-                Html Academy
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="page-header__wrapper">
+        <a class="page-header__logo">
+          <img src="https://via.placeholder.com/102x84" alt="Логотип">
+        </a>
+        <nav class="main-nav">
+          <div class="main-nav__wrapper">
+            <button class="main-nav__toggle" type="button"><span>Открыть меню</span></button>
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">
+                    Главная
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="catalog.html">
+                    Фото и видео
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="form.html">
+                    Форма отзыва
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="https://htmlacademy.ru/study">
+                    Html Academy
+                  </a>
+                </li>
+              </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <main class="page-main">
       <section class="introduction">
@@ -52,9 +55,9 @@
           <ul class="reasons__list reasons-list">
             <li class="reasons-list__item">
               <div class="reason-header reason-header--left">
-                <h3 class="reasons-list__name">Настоящий городок</h3>
-                <span class="reasons-list__number">№1</span>
-                <p class="reasons-list__text">
+                <h3 class="reason-header__name">Настоящий городок</h3>
+                <span class="reason-header__number">№1</span>
+                <p class="reason-header__text">
                   Седона не аттракцион для туристов, там течёт своя жизнь
                 </p>
               </div>
@@ -83,36 +86,36 @@
             </li>
             <li class="reasons-list__item">
               <div class="reason-header reason-header--right">
-                <h3 class="reasons__name">Там есть мост дьявола</h3>
-                <span class="reasons__number">№2</span>
-                <p class="reasons__text">
+                <h3 class="reason-header__name">Там есть мост дьявола</h3>
+                <span class="reason-header__number">№2</span>
+                <p class="reason-header__text">
                   Да, по нему можно пройти! Если вы осмелитесь, конечно
                 </p>
               </div>
             </li>
             <li class="reasons-list__item">
               <div class="reason-header reason-header--brief">
-                <h3 class="reasons__name">Небольшая площадь</h3>
-                <span class="reasons__number">№3</span>
-                <p class="reasons__text">
+                <h3 class="reason-header__name">Небольшая площадь</h3>
+                <span class="reason-header__number">№3</span>
+                <p class="reason-header__text">
                   Все интересные места находятся очень близко
                 </p>
               </div>
             </li>
             <li class="reasons-list__item">
               <div class="reason-header reason-header--brief">
-                <h3 class="reasons__name">Красивая дорога</h3>
-                <span class="reasons__number">№4</span>
-                <p class="reasons__text">
+                <h3 class="reason-header__name">Красивая дорога</h3>
+                <span class="reason-header__number">№4</span>
+                <p class="reason-header__text">
                   Ехать в Седону из Лас-Вегаса совсем не скучно!
                 </p>
               </div>
             </li>
             <li class="reasons-list__item">
               <div class="reason-header reason-header--brief">
-                <h3 class="reasons__name">Мало туристов</h3>
-                <span class="reasons__number">№5</span>
-                <p class="reasons__text">
+                <h3 class="reason-header__name">Мало туристов</h3>
+                <span class="reason-header__number">№5</span>
+                <p class="reason-header__text">
                   Большинство идёт в Гранд Каньон и толпится там
                 </p>
               </div>
@@ -144,25 +147,22 @@
         <div class="page-footer__socials socials">
           <ul class="socials__list">
             <li class="socials__item">
-              <a class="socials__link socials__link--twitter" href="blank.html">
-                Twitter
+              <a class="socials__link socials__link--twitter" href="blank.html" aria-label="Twitter">
               </a>
             </li>
             <li class="socials__item">
-              <a class="socials__link socials__link--facebook" href="blank.html">
-                Facebook
+              <a class="socials__link socials__link--facebook" href="blank.html" aria-label="Facebook">
               </a>
             </li>
             <li class="socials__item">
-              <a class="socials__link socials__link--youtube" href="blank.html">
-                YouTube
+              <a class="socials__link socials__link--youtube" href="blank.html" aria-label="YouTube">
               </a>
             </li>
           </ul>
         </div>
         <p class="page-footer__developer developer">
           Разработано
-          <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <a class="developer__link visually-hidden" href="https://htmlacademy.ru/intensive/adaptive">
             Html Academy
           </a>
         </p>
