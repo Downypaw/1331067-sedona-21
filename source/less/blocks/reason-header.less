@@ -1,0 +1,26 @@
+.reason-header {
+  background-color: @highlight-color;
+  color: @basic-color;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 34px;
+  padding-bottom: 40px;
+
+  &__name {
+    .title();
+  }
+
+  &--brief {
+    background-color: @reason-brief-color;
+    border-bottom: 1px solid @border-color;
+
+    .reason-header__name {
+      color: @text-bold-color;
+    }
+
+    .reason-header__text,
+    .reason-header__number {
+      color: @text-color;
+    }
+  }
+}
