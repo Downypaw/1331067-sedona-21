@@ -1,0 +1,47 @@
+.review-form {
+  &__initials,
+  &__contacts,
+  &__impression,
+  &__attractions {
+    .list();
+  }
+}
+
+.review-form__part {
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid @border-form-color;
+  margin-top: 20px;
+}
+
+.review-form__part:last-of-type {
+  border-bottom: none;
+}
+
+.review-form__legend {
+  .title();
+  text-align: center;
+}
+
+.review-form__comment {
+  margin-top: 10px;
+  border: none;
+  background-color: @input-color;
+  resize: none;
+  width: 279px;
+  height: 160px;
+  margin-bottom: 51px;
+}
+
+.review-form__comment::placeholder {
+  .title();
+  text-transform: none;
+}
+
+.review-form__submit {
+  .button();
+  font-size: 21px;
+  width: 100%;
+  margin-bottom: 48px;
+}

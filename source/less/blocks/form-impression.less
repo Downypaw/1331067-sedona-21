@@ -1,0 +1,33 @@
+.form-impression {
+  margin-top: 37px;
+}
+
+.form-impression__option {
+  .label();
+  position: relative;
+  margin-left: 78px;
+  margin-bottom: 43px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.form-impression__button + .form-impression__option::before {
+  content: "";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: @input-color;
+  left: -74px;
+  top: -15px;
+}
+
+.form-impression__button:checked + .form-impression__option::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: @text-color;
+  left: -60px;
+}
