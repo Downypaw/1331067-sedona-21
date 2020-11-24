@@ -1,0 +1,58 @@
+.form-contacts {
+  padding-bottom: 14px;
+}
+
+.form-contacts__label {
+  .label();
+  margin-left: 22px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-contacts__input {
+  .input();
+  width: 100%;
+  margin-bottom: 14px;
+  .title();
+  text-transform: none;
+}
+
+.form-contacts__input::placeholder {
+  .title();
+  text-transform: none;
+}
+
+.form-contacts__input-wrapper {
+  position: relative;
+}
+
+.form-contacts__input-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  background-color: @icon-color;
+  right: 0;
+}
+
+.form-contacts__input-wrapper--phone::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: url("../img/phone.svg");
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+}
+
+.form-contacts__input-wrapper--email::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 12px;
+  background: url("../img/mail.svg");
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+}

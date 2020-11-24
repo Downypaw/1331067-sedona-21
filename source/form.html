@@ -3,42 +3,45 @@
   <head>
     <meta charset="utf-8">
     <title>Форма отзыва сайта</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo">
-        <img src="https://via.placeholder.com/102x84" alt="Логотип">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a href="#">
-                Главная
-              </a>
-            </li>
-            <li class="main-nav__item">
-              <a href="catalog.html">
-                Фото и видео
-              </a>
-            </li>
-            <li class="main-nav__item">
-              <a href="form.html">
-                Форма отзыва
-              </a>
-            </li>
-            <li class="main-nav__item">
-              <a href="https://htmlacademy.ru/study">
-                Html Academy
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="page-header__wrapper">
+        <a class="page-header__logo">
+          <img src="https://via.placeholder.com/102x84" alt="Логотип">
+        </a>
+        <nav class="main-nav">
+          <div class="main-nav__wrapper">
+            <button class="main-nav__toggle" type="button"><span>Открыть меню</span></button>
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="index.html">
+                    Главная
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="catalog.html">
+                    Фото и видео
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">
+                    Форма отзыва
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="https://htmlacademy.ru/study">
+                    Html Academy
+                  </a>
+                </li>
+              </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <main class="page-main">
-      <section class="introduction">
+      <section class="introduction introduction--form">
         <div class="introduction-wrapper">
           <h1 class="introduction__title">Оставьте свой отзыв</h1>
           <p class="introduction__text">
@@ -52,15 +55,15 @@
             <ul class="review-form__initials initials">
               <li class="initials__item">
                 <label class="initials__label" for="name">Имя*:</label>
-                <input class="initials__input" type="text" name="name-field" id="name" required>
+                <input class="initials__input" type="text" name="name-field" id="name"  placeholder="Петр" required>
               </li>
               <li class="initials__item">
                 <label class="initials__label" for="surname">Фамилия*:</label>
-                <input class="initials__input" type="text" name="surname-field" id="surname" required>
+                <input class="initials__input" type="text" name="surname-field" id="surname" placeholder="Иванов" required>
               </li>
               <li class="initials__item">
                 <label class="initials__label" for="patronymic">Отчество:</label>
-                <input class="initials__input" type="text" name="patronymic-field" id="patronymic">
+                <input class="initials__input" type="text" name="patronymic-field" id="patronymic" placeholder="Александрович">
               </li>
             </ul>
           </fieldset>
@@ -69,11 +72,15 @@
             <ul class="review-form__contacts form-contacts">
               <li class="form-contacts__item">
                 <label class="form-contacts__label" for="phone">Контактный телефон:</label>
-                <input class="form-contacts__input" type="tel" name="phone-field" id="phone">
+                <div class="form-contacts__input-wrapper form-contacts__input-wrapper--phone">
+                  <input class="form-contacts__input" type="tel" name="phone-field" id="phone" placeholder="Введите телефон">
+                </div>
               </li>
               <li class="form-contacts__item">
                 <label class="form-contacts__label" for="email">Электронная почта:</label>
-                <input class="form-contacts__input" type="email" name="email-field" id="email">
+                <div class="form-contacts__input-wrapper form-contacts__input-wrapper--email">
+                  <input class="form-contacts__input" type="email" name="email-field" id="email" placeholder="Введите e-mail">
+                </div>
               </li>
             </ul>
           </fieldset>
@@ -81,15 +88,15 @@
             <legend class="review-form__legend">Ваше общее впечатление:</legend>
             <ul class="review-form__impression form-impression">
               <li class="form-impression__item">
-                <input class="form-impression__button" type="radio" name="impression-button" id="positiv-impression" value="Скорее положительное" checked>
+                <input class="form-impression__button visually-hidden" type="radio" name="impression-button" id="positiv-impression" value="Скорее положительное" checked>
                 <label class="form-impression__option" for="positiv-impression">Скорее положительное</label>
               </li>
               <li class="form-impression__item">
-                <input class="form-impression__button" type="radio" name="impression-button" id="negative-impression" value="Скорее отрицательное">
+                <input class="form-impression__button visually-hidden" type="radio" name="impression-button" id="negative-impression" value="Скорее отрицательное">
                 <label class="form-impression__option" for="negative-impression">Скорее отрицательное</label>
               </li>
               <li class="form-impression__item">
-                <input class="form-impression__button" type="radio" name="impression-button" id="indefinitely" value="Затрудняюсь ответить">
+                <input class="form-impression__button visually-hidden" type="radio" name="impression-button" id="indefinitely" value="Затрудняюсь ответить">
                 <label class="form-impression__option" for="indefinitely">Затрудняюсь ответить</label>
               </li>
             </ul>
@@ -98,19 +105,19 @@
             <legend class="review-form__legend">Посещённые достопримечательности:</legend>
             <ul class="review-form__attractions form-attractions">
               <li class="form-attractions__item">
-                <input class="form-attractions__checkbox" type="checkbox" name="attraction" id="bridge" value="Мост Дьявола" checked>
+                <input class="form-attractions__checkbox visually-hidden" type="checkbox" name="attraction" id="bridge" value="Мост Дьявола" checked>
                 <label class="form-attractions__option" for="bridge">Мост Дьявола</label>
               </li>
               <li class="form-attractions__item">
-                <input class="form-attractions__checkbox" type="checkbox" name="attraction" id="mountain" value="Гора-Колокол" checked>
+                <input class="form-attractions__checkbox visually-hidden" type="checkbox" name="attraction" id="mountain" value="Гора-Колокол" checked>
                 <label class="form-attractions__option" for="mountain">Гора-Колокол</label>
               </li>
               <li class="form-attractions__item">
-                <input class="form-attractions__checkbox" type="checkbox" name="attraction" id="slide-park" value="Слайд-парк" checked>
+                <input class="form-attractions__checkbox visually-hidden" type="checkbox" name="attraction" id="slide-park" value="Слайд-парк" checked>
                 <label class="form-attractions__option" for="slide-park">Слайд-парк</label>
               </li>
               <li class="form-attractions__item">
-                <input class="form-attractions__checkbox" type="checkbox" name="attraction" id="red-rocks" value="Красные скалы">
+                <input class="form-attractions__checkbox visually-hidden" type="checkbox" name="attraction" id="red-rocks" value="Красные скалы">
                 <label class="form-attractions__option" for="red-rocks">Красные скалы</label>
               </li>
             </ul>
@@ -123,30 +130,27 @@
         </form>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__wraper">
+      <div class="page-footer__wrapper">
         <span class="page-footer__hashtag hashtag">#Visitsedona</span>
         <div class="page-footer__socials socials">
           <ul class="socials__list">
             <li class="socials__item">
-              <a class="socials__link socials__link--twitter" href="blank.html">
-                Twitter
+              <a class="socials__link socials__link--twitter" href="blank.html" aria-label="Twitter">
               </a>
             </li>
             <li class="socials__item">
-              <a class="socials__link socials__link--facebook" href="blank.html">
-                Facebook
+              <a class="socials__link socials__link--facebook" href="blank.html" aria-label="Facebook">
               </a>
             </li>
             <li class="socials__item">
-              <a class="socials__link socials__link--youtube" href="blank.html">
-                YouTube
+              <a class="socials__link socials__link--youtube" href="blank.html" aria-label="YouTube">
               </a>
             </li>
           </ul>
         </div>
         <p class="page-footer__developer developer">
           Разработано
-          <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <a class="developer__link visually-hidden" href="https://htmlacademy.ru/intensive/adaptive">
             Html Academy
           </a>
         </p>

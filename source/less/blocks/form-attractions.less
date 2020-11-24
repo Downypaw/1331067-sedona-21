@@ -1,0 +1,31 @@
+.form-attractions {
+  margin-top: 36px;
+}
+
+.form-attractions__option {
+  .label();
+  position: relative;
+  margin-left: 78px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 54px;
+}
+
+.form-attractions__checkbox + .form-attractions__option::before {
+  content: "";
+  width: 46px;
+  height: 46px;
+  position: absolute;
+  background-color: @input-color;
+  left: -74px;
+  top: -15px;
+}
+
+.form-attractions__checkbox:checked + .form-attractions__option::after {
+  content: "";
+  width: 23.13px;
+  height: 16.23px;
+  position: absolute;
+  background: url("../img/tick.svg");
+  left: -64px;
+}
