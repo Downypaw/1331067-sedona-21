@@ -1,0 +1,34 @@
+.gallery {
+  &__photos {
+    .list();
+  }
+
+  &__photo-name,
+  &__likes {
+    font-weight: bold;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: @text-bold-color;
+  }
+
+  &__author {
+    line-height: 24px;
+    display: block;
+  }
+
+  &__like-button {
+    width: 23px;
+    height: 21px;
+    background: url("../img/like-icon.svg");
+    border: none;
+    background-color: transparent;
+    margin-right: 14px;
+    cursor: pointer;
+  }
+
+  &__post {
+    padding-bottom: 15px;
+    padding-top: 22px;
+    border-bottom: 1px solid @border-form-color;
+  }
+}

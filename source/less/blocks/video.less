@@ -1,0 +1,79 @@
+.video {
+  position: relative;
+  padding-top: 33px;
+
+  &__title {
+    .title();
+    text-align: center;
+  }
+
+  &__description {
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 24px;
+    margin-bottom: 33px;
+  }
+
+  &__frame {
+    display: block;
+  }
+
+  &__controls {
+    background-color: @input-color;
+    min-height: 66px;
+    margin-bottom: 50px;
+  }
+
+  &__range {
+    background-color: fade(@text-bold-color, 60%);
+    min-height: 45px;
+    position: absolute;
+    width: 100%;
+    bottom: 66px;
+    padding-left: 22px;
+    padding-right: 23px;
+    box-sizing: border-box;
+  }
+
+  &__bar {
+    width: 100%;
+    background-color: fade(@basic-color, 20%);
+    height: 3px;
+    margin-top: 22px;
+  }
+
+  &__toggle {
+    width: 9.07px;
+    height: 9.07px;
+    background-color: @basic-color;
+    border-radius: 50%;
+    margin-top: -6px;
+    margin-left: 16%;
+  }
+
+  &__replay,
+  &__subtitles,
+  &__fullscreen {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__replay {
+    width: 16px;
+    height: 20px;
+    background: url("../img/replay.svg");
+  }
+
+  &__subtitles {
+    width: 32px;
+    height: 20px;
+    background: url("../img/subtitles.svg");
+  }
+
+  &__fullscreen {
+    width: 20px;
+    height: 20px;
+    background: url("../img/fullscreen.svg");
+  }
+}
