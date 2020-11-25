@@ -3,45 +3,45 @@
   <head>
     <meta charset="utf-8">
     <title>Страница с фото и видео</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <body class="page__body">
-      <header class="page-header">
-        <div class="page-header__wrapper">
-          <a class="page-header__logo">
-            <img src="https://via.placeholder.com/102x84" alt="Логотип">
-          </a>
-          <nav class="main-nav">
-            <div class="main-nav__wrapper">
-              <button class="main-nav__toggle" type="button"><span>Открыть меню</span></button>
-                <ul class="main-nav__list">
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="index.html">
-                      Главная
-                    </a>
-                  </li>
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="#">
-                      Фото и видео
-                    </a>
-                  </li>
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="form.html">
-                      Форма отзыва
-                    </a>
-                  </li>
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="https://htmlacademy.ru/study">
-                      Html Academy
-                    </a>
-                  </li>
-                </ul>
-            </div>
-          </nav>
-        </div>
-      </header>
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <a class="page-header__logo">
+          <img src="https://via.placeholder.com/102x84" alt="Логотип">
+        </a>
+        <nav class="main-nav">
+          <div class="main-nav__wrapper">
+            <button class="main-nav__toggle" type="button"><span>Открыть меню</span></button>
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="index.html">
+                    Главная
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">
+                    Фото и видео
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="form.html">
+                    Форма отзыва
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="https://htmlacademy.ru/study">
+                    Html Academy
+                  </a>
+                </li>
+              </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
     <main class="page-main">
-      <section class="introduction">
+      <section class="introduction introduction--catalog">
         <div class="introduction__wrapper">
           <h1 class="introduction__title">Фото и видео</h1>
           <p class="introduction__text">
@@ -59,7 +59,7 @@
               </a>
               <h3 class="gallery__photo-name">Неродные просторы</h3>
               <span class="gallery__author">Автор фото: Борис</span>
-              <button class="gallery__like-button" type="button">Like</button>
+              <button class="gallery__like-button" type="button" aria-label="like"></button>
               <span class="gallery__likes">1350</span>
             </li>
             <li class="gallery__post">
@@ -68,7 +68,7 @@
               </a>
               <h3 class="gallery__photo-name">Местная растительность</h3>
               <span class="gallery__author">Автор фото: Сергей</span>
-              <button class="gallery__like-button" type="button">Like</button>
+              <button class="gallery__like-button" type="button" aria-label="like"></button>
               <span class="gallery__likes">143</span>
             </li>
             <li class="gallery__post">
@@ -77,7 +77,7 @@
               </a>
               <h3 class="gallery__photo-name">Дорога на север</h3>
               <span class="gallery__author">Автор фото: Петр</span>
-              <button class="gallery__like-button" type="button">Like</button>
+              <button class="gallery__like-button" type="button" aria-label="like"></button>
               <span class="gallery__likes">96</span>
             </li>
             <li class="gallery__post">
@@ -86,7 +86,7 @@
               </a>
               <h3 class="gallery__photo-name">Мост дьявола</h3>
               <span class="gallery__author">Автор фото: Антон</span>
-              <button class="gallery__like-button" type="button">Like</button>
+              <button class="gallery__like-button" type="button" aria-label="like"></button>
               <span class="gallery__likes">254</span>
             </li>
           </ul>
@@ -119,25 +119,22 @@
         <div class="page-footer__socials socials">
           <ul class="socials__list">
             <li class="socials__item">
-              <a class="socials__link socials__link--twitter" href="blank.html">
-                Twitter
+              <a class="socials__link socials__link--twitter" href="blank.html" aria-label="Twitter">
               </a>
             </li>
             <li class="socials__item">
-              <a class="socials__link socials__link--facebook" href="blank.html">
-                Facebook
+              <a class="socials__link socials__link--facebook" href="blank.html" aria-label="Facebook">
               </a>
             </li>
             <li class="socials__item">
-              <a class="socials__link socials__link--youtube" href="blank.html">
-                YouTube
+              <a class="socials__link socials__link--youtube" href="blank.html" aria-label="YouTube">
               </a>
             </li>
           </ul>
         </div>
         <p class="page-footer__developer developer">
           Разработано
-          <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <a class="developer__link visually-hidden" href="https://htmlacademy.ru/intensive/adaptive">
             Html Academy
           </a>
         </p>
