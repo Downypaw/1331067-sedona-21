@@ -1,6 +1,33 @@
 .features-list {
   padding-top: 295px;
   .list();
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-left: 53px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 9%;
+
+    &__name {
+      .title-desktop();
+      text-align: center;
+    }
+
+    &__text {
+      text-align: center;
+    }
+
+    &__item:nth-of-type(2) {
+      order: 1;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &__item:not(:last-of-type) {
+      margin-right: 8.66666667%;
+    }
+  }
 
   &__name {
     .title();

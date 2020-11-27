@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -13,7 +14,7 @@
         </a>
         <nav class="main-nav">
           <div class="main-nav__wrapper">
-            <button class="main-nav__toggle" type="button"><span>Открыть меню</span></button>
+            <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
               <ul class="main-nav__list">
                 <li class="main-nav__item">
                   <a class="main-nav__link" href="#">
@@ -51,73 +52,83 @@
       </section>
       <section class="reasons">
         <h2 class="visually-hidden">Причины</h2>
-        <div class="reasons__wrapper">
           <ul class="reasons__list reasons-list">
             <li class="reasons-list__item">
               <div class="reason-header reason-header--left">
-                <h3 class="reason-header__name">Настоящий городок</h3>
-                <span class="reason-header__number">№1</span>
-                <p class="reason-header__text">
-                  Седона не аттракцион для туристов, там течёт своя жизнь
-                </p>
+                <div class="reason-header__wrapper">
+                  <h3 class="reason-header__name">Настоящий городок</h3>
+                  <span class="reason-header__number">№1</span>
+                  <p class="reason-header__text">
+                    Седона не аттракцион для туристов, там течёт своя жизнь
+                  </p>
+                </div>
               </div>
               <div class="reasons__extra-content">
-                <ul class="reasons__list features-list">
-                  <li class="features-list__item">
-                    <h4 class="features-list__name">Жильё</h4>
-                    <p class="features-list__text">
-                      Рекомендуем пожить в настоящем мотеле, всё как в кино!
-                    </p>
-                  </li>
-                  <li class="features-list__item">
-                    <h4 class="features-list__name">Сувениры</h4>
-                    <p class="features-list__text">
-                      Не только китайского, но и местного производства!
-                    </p>
-                  </li>
-                  <li class="features-list__item">
-                    <h4 class="features-list__name">Еда</h4>
-                    <p class="features-list__text">
-                      Всегда заказывайте фирменный бургер, вы не разочаруетесь!
-                    </p>
-                  </li>
-                </ul>
-              </div>
+                <div class="reasons__extra-wrapper">
+                  <ul class="reasons__list features-list">
+                    <li class="features-list__item">
+                      <h4 class="features-list__name">Жильё</h4>
+                      <p class="features-list__text">
+                        Рекомендуем пожить в настоящем мотеле, всё как в кино!
+                      </p>
+                    </li>
+                    <li class="features-list__item">
+                      <h4 class="features-list__name">Сувениры</h4>
+                      <p class="features-list__text">
+                        Не только китайского, но и местного производства!
+                      </p>
+                    </li>
+                    <li class="features-list__item">
+                      <h4 class="features-list__name">Еда</h4>
+                      <p class="features-list__text">
+                        Всегда заказывайте фирменный бургер, вы не разочаруетесь!
+                      </p>
+                    </li>
+                  </ul>
+                </div>
             </li>
             <li class="reasons-list__item">
               <div class="reason-header reason-header--right">
-                <h3 class="reason-header__name">Там есть мост дьявола</h3>
-                <span class="reason-header__number">№2</span>
-                <p class="reason-header__text">
-                  Да, по нему можно пройти! Если вы осмелитесь, конечно
-                </p>
+                <div class="reason-header__wrapper">
+                  <h3 class="reason-header__name">Там есть мост дьявола</h3>
+                  <span class="reason-header__number">№2</span>
+                  <p class="reason-header__text">
+                    Да, по нему можно пройти! Если вы осмелитесь, конечно
+                  </p>
+                </div>
               </div>
             </li>
             <li class="reasons-list__item">
               <div class="reason-header reason-header--brief">
-                <h3 class="reason-header__name">Небольшая площадь</h3>
-                <span class="reason-header__number">№3</span>
-                <p class="reason-header__text">
-                  Все интересные места находятся очень близко
-                </p>
+                <div class="reason-header__wrapper">
+                  <h3 class="reason-header__name">Небольшая площадь</h3>
+                  <span class="reason-header__number">№3</span>
+                  <p class="reason-header__text">
+                    Все интересные места находятся очень близко
+                  </p>
+                </div>
               </div>
             </li>
             <li class="reasons-list__item">
               <div class="reason-header reason-header--brief">
-                <h3 class="reason-header__name">Красивая дорога</h3>
-                <span class="reason-header__number">№4</span>
-                <p class="reason-header__text">
-                  Ехать в Седону из Лас-Вегаса совсем не скучно!
-                </p>
+                <div class="reason-header__wrapper">
+                  <h3 class="reason-header__name">Красивая дорога</h3>
+                  <span class="reason-header__number">№4</span>
+                  <p class="reason-header__text">
+                    Ехать в Седону из Лас-Вегаса совсем не скучно!
+                  </p>
+                </div>
               </div>
             </li>
             <li class="reasons-list__item">
               <div class="reason-header reason-header--brief">
-                <h3 class="reason-header__name">Мало туристов</h3>
-                <span class="reason-header__number">№5</span>
-                <p class="reason-header__text">
-                  Большинство идёт в Гранд Каньон и толпится там
-                </p>
+                <div class="reason-header__wrapper">
+                  <h3 class="reason-header__name">Мало туристов</h3>
+                  <span class="reason-header__number">№5</span>
+                  <p class="reason-header__text">
+                    Большинство едет в Гранд Каньон и толпится там
+                  </p>
+                </div>
               </div>
             </li>
           </ul>
@@ -137,7 +148,7 @@
       <section class="map">
         <div class="map__wrapper">
           <h2 class="visually-hidden">Карта</h2>
-          <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d838162.8880959025!2d-112.35544189386209!3d34.85437338100491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1605522438965!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d838162.8880959025!2d-112.35544189386209!3d34.85437338100491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1605522438965!5m2!1sru!2sru" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
       </section>
     </main>

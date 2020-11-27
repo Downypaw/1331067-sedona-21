@@ -1,3 +1,9 @@
+.introduction__wrapper {
+  // width: 255px;
+  width: 79.6875%;
+  margin: 0 auto;
+}
+
 .introduction--form,
 .introduction--catalog {
   border-bottom: 1px solid @border-form-color;
@@ -17,5 +23,15 @@
 
   &--main-page {
     line-height: 26px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .introduction__wrapper {
+    width: 486px;
+  }
+
+  .introduction__title {
+    .title-desktop();
   }
 }
