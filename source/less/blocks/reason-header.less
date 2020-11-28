@@ -7,8 +7,7 @@
   padding-bottom: 40px;
 
   &__wrapper {
-    width: 91%;
-    margin: 0 auto;
+    .container();
   }
 
   &__name {
@@ -19,10 +18,6 @@
   &--brief {
     background-color: @reason-brief-color;
     border-bottom: 1px solid @border-color;
-
-    .reason-header__wrapper {
-      width: 80%;
-    }
 
     .reason-header__name {
       color: @text-bold-color;
@@ -37,8 +32,7 @@
 
 @media (min-width: @tablet-width) {
   .reason-header__wrapper {
-    width: 74%;
-    margin: 0 auto;
+    width: 192px;
   }
 
   .reason-header--left {
@@ -59,7 +53,6 @@
 
 @media (min-width: @desktop-width) {
   .reason-header__wrapper {
-    width: 66%;
-    margin: 0 auto;
+    width: 262px;
   }
 }

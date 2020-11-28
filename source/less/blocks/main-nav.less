@@ -36,8 +36,7 @@
 
 @media (min-width: @tablet-width) {
   .main-nav__wrapper {
-    width: 768px;
-    margin: 0 auto;
+    .container();
   }
 
   .main-nav__toggle {
@@ -59,7 +58,6 @@
     color: @text-bold-color;
     font-size: 14px;
     line-height: 26px;
-    min-width: 19.921875%;
   }
 
   .main-nav__item:first-of-type {
@@ -73,7 +71,7 @@
 
 @media (min-width: @desktop-width) {
   .main-nav__wrapper {
-    width: 1200px;
+    .container();
   }
 
   .main-nav__item {
