@@ -1,6 +1,14 @@
 .hotel-search {
   padding-top: 33px;
   padding-bottom: 49px;
+
+  &__wrapper {
+    .container();
+
+    @media (min-width: @tablet-width) {
+      width: 458px;
+    }
+  }
 }
 
 .hotel-search__title {

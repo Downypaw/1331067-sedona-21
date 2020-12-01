@@ -5,3 +5,44 @@
 .reasons-list__item:nth-child(2) {
   padding-bottom: 260px;
 }
+
+@media (min-width: @tablet-width) {
+  .reasons__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .reasons-list__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .reasons__extra-content {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    min-height: 330px;
+  }
+
+  .reasons-list__item:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  .reasons-list__item:nth-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    padding-bottom: 0;
+  }
+
+  .reasons-list__item:nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .reasons-list__item:nth-child(4) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+}

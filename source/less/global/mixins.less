@@ -12,6 +12,14 @@
   font-weight: bold;
 }
 
+.title-desktop {
+  color: @text-bold-color;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
 .label {
   line-height: 26px;
   text-transform: uppercase;
@@ -65,4 +73,17 @@
 :focus {
   outline: 0;
   outline-offset: 0;
+}
+
+.container {
+  width: 282px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+  }
 }

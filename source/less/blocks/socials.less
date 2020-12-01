@@ -1,5 +1,7 @@
 .socials__list {
   .list();
+  display: flex;
+  flex-direction: row;
 }
 
 .socials__link {
@@ -10,6 +12,10 @@
   display: inline-block;
   vertical-align: baseline;
   position: relative;
+}
+
+.socials__item:not(:last-of-type) {
+  margin-right: 6px;
 }
 
 .socials__link--twitter::before {
