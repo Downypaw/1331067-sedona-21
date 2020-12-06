@@ -12,6 +12,14 @@
   margin-bottom: 20px;
   .title();
   text-transform: none;
+
+  @media (min-width: @tablet-width) {
+    width: 178px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 312px;
+  }
 }
 
 .initials__input::placeholder {

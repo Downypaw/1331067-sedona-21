@@ -1,5 +1,10 @@
 .form-contacts {
   padding-bottom: 14px;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .form-contacts__label {
@@ -24,6 +29,10 @@
 
 .form-contacts__input-wrapper {
   position: relative;
+
+  @media (min-width: @desktop-width) {
+    width: 315px;
+  }
 }
 
 .form-contacts__input-wrapper::after {
