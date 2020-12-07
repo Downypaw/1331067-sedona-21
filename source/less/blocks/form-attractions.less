@@ -1,5 +1,17 @@
 .form-attractions {
   margin-top: 36px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 12.63%;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: 0;
+  }
 }
 
 .form-attractions__option {

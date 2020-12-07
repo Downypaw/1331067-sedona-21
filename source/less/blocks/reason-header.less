@@ -38,61 +38,15 @@
   .reason-header--left {
     grid-column-start: 1;
     grid-column-end: 2;
-
-    .reason-header__wrapper {
-      margin-right: 35px;
-    }
   }
 
   .reason-header--right {
     grid-column-start: 3;
     grid-column-end: 4;
-
-    .reason-header__wrapper {
-      margin-left: 52px;
-    }
   }
 
   .reason-header--brief {
     grid-column-start: 1;
     grid-column-end: 4;
-
-    .reason-header__wrapper {
-      margin-right: 35px;
-    }
-  }
-
-  .reasons-list__item:last-of-type {
-    .reason-header--brief {
-      .reason-header__wrapper {
-        margin-right: auto;
-        margin-left: 35px;
-      }
-    }
-  }
-
-  .reasons-list__item:nth-child(4) {
-    .reason-header--brief {
-      .reason-header__wrapper {
-        margin: 0 auto;
-      }
-    }
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .reason-header {
-    .reason-header__wrapper {
-      width: 262px;
-      margin: 0 auto;
-    }
-  }
-
-  .reasons-list__item:last-of-type {
-    .reason-header--brief {
-      .reason-header__wrapper {
-        margin: 0 auto;
-      }
-    }
   }
 }
