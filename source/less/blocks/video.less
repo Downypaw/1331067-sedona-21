@@ -2,9 +2,19 @@
   position: relative;
   padding-top: 33px;
 
+  &__wrapper-part {
+    .container();
+    position: relative;
+    width: 87.5%;
+  }
+
   &__title {
     .title();
     text-align: center;
+
+    @media (min-width: @tablet-width) {
+      font-size: 30px;
+    }
   }
 
   &__description {
@@ -16,12 +26,20 @@
 
   &__frame {
     display: block;
+    position: relative;
   }
 
   &__controls {
     background-color: @input-color;
     min-height: 66px;
     margin-bottom: 50px;
+    position: relative;
+
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      width: 100%;
+      min-height: 0;
+    }
   }
 
   &__range {
@@ -33,6 +51,15 @@
     padding-left: 22px;
     padding-right: 23px;
     box-sizing: border-box;
+
+    @media (min-width: @tablet-width) {
+      bottom: 0;
+    }
+
+    @media (min-width: @tablet-width) {
+      padding-left: 93px;
+      padding-right: 166px;
+    }
   }
 
   &__bar {
@@ -57,23 +84,47 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
+    margin-top: 22px;
+    position: absolute;
+    z-index: 1;
+
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+    }
   }
 
   &__replay {
     width: 16px;
     height: 20px;
     background: url("../img/replay.svg");
+    left: 25px;
   }
 
   &__subtitles {
     width: 32px;
     height: 20px;
     background: url("../img/subtitles.svg");
+    right: 71px;
   }
 
   &__fullscreen {
     width: 20px;
     height: 20px;
     background: url("../img/fullscreen.svg");
+    right: 23px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .video__wrapper-part {
+    width: 648px;
+  }
+
+  .video__frame,
+  .video__wrapper-part--text {
+    .container();
+    width: 445px;
   }
 }
