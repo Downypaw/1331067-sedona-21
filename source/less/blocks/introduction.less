@@ -1,5 +1,19 @@
+.introduction {
+  position: relative;
+}
+
 .introduction__wrapper {
   .container();
+  width: 258px;
+}
+
+.introduction:before {
+  content: "";
+  position: absolute;
+  background: url("../img/intro-triangle.svg");
+  width: 1201px;
+  height: 57px;
+  bottom: -1px;
 }
 
 .introduction--form,
@@ -8,7 +22,9 @@
 }
 
 .introduction__title {
-  margin-top: 60px;
+  margin-top: 34px;
+  margin-right: 3px;
+  margin-bottom: 30px;
   text-align: center;
   .title();
 }
@@ -17,7 +33,7 @@
   text-align: center;
   line-height: 24px;
   text-transform: uppercase;
-  margin-bottom: 48px;
+  margin-bottom: 35px;
 
   &--main-page {
     line-height: 26px;
