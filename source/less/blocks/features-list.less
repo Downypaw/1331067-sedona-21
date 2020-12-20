@@ -9,11 +9,13 @@
   &__name {
     margin: 0;
     margin-bottom: 15px;
+    .title();
   }
 
   &__text {
     margin: 0;
     margin-bottom: 26px;
+    text-transform: uppercase;
   }
 
   &__item:nth-of-type(2) {
@@ -28,7 +30,7 @@
 
   &__item::before {
     content: "";
-    position absolute;
+    position: absolute;
     top: 0;
     left: 0;
   }
@@ -75,12 +77,4 @@
       margin-right: 8.67%;
     }
   }
-
-  &__name {
-    .title();
-  }
-}
-
-.features-list__text {
-  text-transform: uppercase;
 }
