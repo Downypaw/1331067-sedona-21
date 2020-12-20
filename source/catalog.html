@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Страница с фото и видео</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -57,60 +58,86 @@
               <a class="gallery__link">
                 <img class="gallery__photo" src="https://via.placeholder.com/280x280" alt="Неродные просторы">
               </a>
-              <h3 class="gallery__photo-name">Неродные просторы</h3>
-              <span class="gallery__author">Автор фото: Борис</span>
-              <button class="gallery__like-button" type="button" aria-label="like"></button>
-              <span class="gallery__likes">1350</span>
+              <div class="gallery__container">
+                <div class="gallery__container-part">
+                  <h3 class="gallery__photo-name">Неродные просторы</h3>
+                  <span class="gallery__author">Автор фото: Борис</span>
+                </div>
+                <div class="gallery__container-part">
+                  <button class="gallery__like-button" type="button" aria-label="like"></button>
+                  <span class="gallery__likes">1350</span>
+                </div>
+              </div>
             </li>
             <li class="gallery__post">
               <a class="gallery__link">
                 <img class="gallery__photo" src="https://via.placeholder.com/280x280" alt="Местная растительность">
               </a>
-              <h3 class="gallery__photo-name">Местная растительность</h3>
-              <span class="gallery__author">Автор фото: Сергей</span>
-              <button class="gallery__like-button" type="button" aria-label="like"></button>
-              <span class="gallery__likes">143</span>
+              <div class="gallery__container">
+                <div class="gallery__container-part">
+                  <h3 class="gallery__photo-name">Местная растительность</h3>
+                  <span class="gallery__author">Автор фото: Сергей</span>
+                </div>
+                <div class="gallery__container-part">
+                  <button class="gallery__like-button" type="button" aria-label="like"></button>
+                  <span class="gallery__likes">143</span>
+                </div>
+              </div>
             </li>
             <li class="gallery__post">
               <a class="gallery__link">
                 <img class="gallery__photo" src="https://via.placeholder.com/280x280" alt="Дорога на север">
               </a>
-              <h3 class="gallery__photo-name">Дорога на север</h3>
-              <span class="gallery__author">Автор фото: Петр</span>
-              <button class="gallery__like-button" type="button" aria-label="like"></button>
-              <span class="gallery__likes">96</span>
+              <div class="gallery__container">
+                <div class="gallery__container-part">
+                  <h3 class="gallery__photo-name">Дорога на север</h3>
+                  <span class="gallery__author">Автор фото: Петр</span>
+                </div>
+                <div class="gallery__container-part">
+                  <button class="gallery__like-button" type="button" aria-label="like"></button>
+                  <span class="gallery__likes">96</span>
+                </div>
+              </div>
             </li>
             <li class="gallery__post">
               <a class="gallery__link">
                 <img class="gallery__photo" src="https://via.placeholder.com/280x280" alt="Мост дьявола">
               </a>
-              <h3 class="gallery__photo-name">Мост дьявола</h3>
-              <span class="gallery__author">Автор фото: Антон</span>
-              <button class="gallery__like-button" type="button" aria-label="like"></button>
-              <span class="gallery__likes">254</span>
+              <div class="gallery__container">
+                <div class="gallery__container-part">
+                  <h3 class="gallery__photo-name">Мост дьявола</h3>
+                  <span class="gallery__author">Автор фото: Антон</span>
+                </div>
+                <div class="gallery__container-part">
+                  <button class="gallery__like-button" type="button" aria-label="like"></button>
+                  <span class="gallery__likes">254</span>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
       </section>
       <section class="video">
-        <div class="video__wrapper">
-          <h2 class="video__title">Всё ещё сомневаетесь?</h2>
-          <p class="video__description">
-            Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
-          </p>
-          <video class="video__frame" poster="https://via.placeholder.com/320x201" height="201" width="320"></video>
-          <div class="video__controls">
-            <button class="video__replay"></button>
-            <div class="video__range">
-              <div class="video__bar">
-              </div>
-              <div class="video__toggle" tabindex="0" aria-label="Определение времени видео">
-              </div>
-            </div>
-            <button class="video__subtitles"></button>
-            <button class="video__fullscreen"></button>
+          <div class="video__wrapper-part video__wrapper-part--text">
+            <h2 class="video__title">Всё ещё сомневаетесь?</h2>
+            <p class="video__description">
+              Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
+            </p>
           </div>
-        </div>
+          <video class="video__frame" poster="https://via.placeholder.com/320x201" height="201" width="320"></video>
+          <div class="video__wrapper-part">
+            <div class="video__controls">
+              <button class="video__replay"></button>
+                <div class="video__range">
+                  <div class="video__bar">
+                  </div>
+                  <div class="video__toggle" tabindex="0" aria-label="Определение времени видео">
+                  </div>
+                </div>
+              <button class="video__subtitles"></button>
+              <button class="video__fullscreen"></button>
+            </div>
+          </div>
       </section>
     </main>
     <footer class="page-footer">

@@ -1,9 +1,21 @@
 .popup-success {
   padding-top: 38px;
 
+  &__wrapper {
+    .container();
+
+    @media (min-width: @tablet-width) {
+      width: 457px;
+    }
+  }
+
   &__title {
     .title();
     text-align: center;
+
+    @media (min-width: @tablet-width) {
+      font-size: 30px;
+    }
   }
 
   &__message {
@@ -16,8 +28,20 @@
     padding-bottom: 20px;
   }
 
+  &__buttom-wrapper {
+    .container();
+
+    @media (min-width: @tablet-width) {
+      width: 457px;
+    }
+  }
+
   &__close {
     .button();
     width: 100%;
+
+    @media (min-width: @tablet-width) {
+      font-size: 21px;
+    }
   }
 }
