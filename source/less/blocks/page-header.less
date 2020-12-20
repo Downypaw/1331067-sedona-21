@@ -1,21 +1,13 @@
 .page-header {
   min-height: 443px;
   position: relative;
-  background: url("../img/text.svg") 50% 145px no-repeat, url("../img/back-desktop.jpg") 50% 55px;
-  background-size: auto, 901px 389px;
+  background: url("../img/intro-triangle.svg") center bottom no-repeat, url("../img/text.svg") 50% 145px no-repeat, url("../img/back-desktop.jpg") 50% 55px;
+  background-size: auto, auto, 901px 389px;
+  border-bottom: 1px solid @basic-color;
 
   @media (min-width: @tablet-width) {
     min-height: 518px;
   }
-}
-
-.page-header:before {
-  content: "";
-  position: absolute;
-  background: url("../img/intro-triangle.svg");
-  width: 1201px;
-  height: 57px;
-  bottom: -1px;
 }
 
 .page-header__logo {

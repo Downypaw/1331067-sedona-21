@@ -3,16 +3,24 @@
   color: @basic-color;
   text-align: center;
   text-transform: uppercase;
-  padding-top: 34px;
-  padding-bottom: 40px;
+  padding-top: 15px;
+  padding-bottom: 26px;
+  position: relative;
 
   &__wrapper {
     .container();
+    width: 300px;
   }
 
   &__name {
     .title();
     color: @basic-color;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    margin-top: 18px;
   }
 
   &--brief {

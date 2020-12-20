@@ -1,19 +1,18 @@
 .introduction {
-  position: relative;
+  border-color: @basic-color;
+  padding-top: 34px;
+  padding-bottom: 55px;
+  background-image:
+  linear-gradient(-5deg, @highlight-color 12%, transparent 12.3%),
+  linear-gradient(-355deg, @highlight-color 12%, transparent 12.3%);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
 }
 
 .introduction__wrapper {
   .container();
   width: 258px;
-}
-
-.introduction:before {
-  content: "";
-  position: absolute;
-  background: url("../img/intro-triangle.svg");
-  width: 1201px;
-  height: 57px;
-  bottom: -1px;
 }
 
 .introduction--form,
@@ -22,18 +21,17 @@
 }
 
 .introduction__title {
-  margin-top: 34px;
+  margin: 0;
   margin-right: 3px;
-  margin-bottom: 30px;
   text-align: center;
   .title();
 }
 
 .introduction__text {
+  margin-top: 30px;
   text-align: center;
   line-height: 24px;
   text-transform: uppercase;
-  margin-bottom: 35px;
 
   &--main-page {
     line-height: 26px;

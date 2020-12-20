@@ -1,9 +1,55 @@
 .features-list {
-  padding-top: 295px;
   .list();
   display: grid;
   grid-template-columns: 1fr;
-  padding-left: 53px;
+  padding-left: 40px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+
+  &__name {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 26px;
+  }
+
+  &__item:nth-of-type(2) {
+    .features-list__text {
+      margin-top: 18px;
+    }
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__item::before {
+    content: "";
+    position absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__item:nth-of-type(1)::before {
+    background: url("../img/icon-house.svg");
+    width: 39px;
+    height: 36.83px;
+  }
+
+  &__item:nth-of-type(2)::before {
+    background: url("../img/icon-gift.svg");
+    width: 32px;
+    height: 38px;
+  }
+
+  &__item:nth-of-type(3)::before {
+    background: url("../img/icon-burger.svg");
+    width: 40px;
+    height: 34.9px;
+  }
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr 1fr;
