@@ -8,15 +8,26 @@
   display: inline-block;
   vertical-align: baseline;
   margin: 0;
-  margin-right: 30px;
+  margin-top: 35px;
   text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
 }
 
-.developer::before {
-  content: "";
-  position: absolute;
-  width: 26.9px;
-  height: 34.1px;
-  background: url("../img/htmlacademy.svg");
-  right: -35px;
+.developer__logo {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 9px;
+}
+
+.developer:hover .developer__logo path,
+.developer:focus-within .developer__logo path {
+  fill: @highlight-color;
+}
+
+.developer:active .developer__logo path {
+  fill: @text-bold-color;
+  opacity: 0.3;
 }

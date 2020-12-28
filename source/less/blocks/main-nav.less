@@ -1,37 +1,65 @@
 .main-nav {
-  background-color: @basic-color;
-  z-index: 1;
-  min-height: 56px;
-  width: 100%;
-  position: relative;
+  &__wrapper {
+    position: relative;
+  }
 
   &__list {
     .list();
+    min-height: 223px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+      width: 100%;
+      height: 7px;
+    }
   }
-}
 
-.main-nav__toggle {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
-  display: block;
-  width: 64px;
-  height: 56px;
-  cursor: pointer;
-  border: none;
-  background-color: @basic-color;
-}
+  &__close {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    height: 57px;
+    width: 57px;
+    top: 0;
+    right: 0;
+    z-index: 3;
 
-.main-nav--closed .main-nav__toggle::before {
-  right: 20px;
-  top: 18px;
-  content: "";
-  position: absolute;
-  width: 22.9px;
-  height: 4px;
-  background-color: @highlight-color;
-  box-shadow: 0 8px 0 0 @highlight-color, 0 16px 0 0 @highlight-color;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 25px;
+      right: 16px;
+      width: 29px;
+      height: 3px;
+      background-color: #ffffff;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:hover::before,
+    &:hover::after,
+    &:focus::before,
+    &:focus::after {
+      background-color: fade(#ffffff, 60%);
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: fade(#ffffff, 30%);
+    }
+  }
 }
 
 // .main-nav--closed .main-nav__toggle:active::before {
@@ -43,17 +71,20 @@
 
 .main-nav__item {
   background-color: @highlight-color;
-  box-shadow: 0 1px 0 fade(@shadow-color, 20%), inset 0 1px 0 fade(@basic-color, 20%);
-  margin-bottom: 1px;
+  border-top: 1px solid fade(@basic-color, 20%);
+  border-bottom: 1px solid fade(@shadow-color, 20%);
   text-align: center;
-}
+  padding: 7px 0;
 
-.main-nav__item:first-of-type {
-  box-shadow: 0 1px 0 fade(@shadow-color, 20%);
-}
+  &:hover,
+  &:focus-within {
+    background-color: @dark-highlight-color;
+  }
 
-.main-nav__item:last-of-type {
-  box-shadow: inset 0 1px 0 fade(@basic-color, 20%);
+  &:active {
+    background-color: @darkest-highlight-color;
+    color: fade(#ffffff, 30%);
+  }
 }
 
 .main-nav__link {
@@ -66,20 +97,68 @@
   display: block;
 }
 
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+
+  .main-nav--closed .main-nav__close {
+    display: none;
+  }
+
+  .main-nav--closed .main-nav__list::after {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__close {
+    display: none;
+  }
+}
+
 @media (min-width: @tablet-width) {
-  .main-nav__toggle {
+  .main-nav__close {
     display: none;
   }
 
   .main-nav__list {
+    min-height: 56px;
+    z-index: 3;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
   }
 
+  .main-nav__list::after {
+    display: none;
+  }
+
   .main-nav__item {
-    min-width: 19.921875%;
     background-color: @basic-color;
     box-shadow: none;
+    border: none;
+    min-width: 19.92%;
+    display: inline-block;
+    vertical-align: baseline;
+    height: 100%;
+    padding-top: 15px;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .main-nav__item--active {
+    .main-nav__link {
+      color: @active-menu-color;
+
+      &:hover,
+      &:focus {
+        color: @active-hover-menu-color;
+      }
+
+      &:active {
+        color: @active-menu-color;
+        opacity: 0.3;
+      }
+    }
   }
 
   .main-nav__link {
@@ -88,12 +167,29 @@
     line-height: 26px;
   }
 
+  .main-nav__item:hover,
+  .main-nav__item:focus-within {
+    color: @highlight-color;
+    background-color: transparent;
+  }
+
+  .main-nav__item:active {
+    color: @text-bold-color;
+    opacity: 0.3;
+    background-color: transparent;
+  }
+
+  .main-nav__link:focus {
+    color: @highlight-color;
+    background-color: transparent;
+  }
+
   .main-nav__item:first-of-type {
     box-shadow: none;
   }
 
   .main-nav__item:nth-of-type(2) {
-    margin-right: 20.3125%;
+    margin-right: 19.92%;
   }
 }
 
