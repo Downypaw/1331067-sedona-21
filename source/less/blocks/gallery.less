@@ -1,14 +1,45 @@
 .gallery {
+  &__wrapper {
+    .container();
+
+    @media (min-width: @tablet-width) {
+      width: 648px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 1200px;
+    }
+  }
+
   &__photos {
     .list();
+
+    @media (min-width: @tablet-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &__photo {
+    display: block;
   }
 
   &__photo-name,
   &__likes {
+    font-size: 14px;
     font-weight: bold;
     line-height: 24px;
     text-transform: uppercase;
     color: @text-bold-color;
+
+    @media (min-width: @desktop-width) {
+      color: @basic-color;
+    }
   }
 
   &__author {
@@ -22,7 +53,7 @@
     background: url("../img/like-icon.svg");
     border: none;
     background-color: transparent;
-    margin-right: 14px;
+    margin-right: 8px;
     cursor: pointer;
   }
 
@@ -30,5 +61,62 @@
     padding-bottom: 15px;
     padding-top: 22px;
     border-bottom: 1px solid @border-form-color;
+    position: relative;
+
+    @media (min-width: @tablet-width) {
+      border-bottom: none;
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .gallery__post:first-of-type {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .gallery__post:nth-of-type(3) {
+    .gallery__container {
+      background-color: @different-post-color;
+    }
+  }
+
+  .gallery__container {
+    background-color: @input-color;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .gallery__container-part:first-of-type {
+    margin-left: 20px;
+  }
+
+  .gallery__container-part:nth-of-type(2) {
+    margin-right: 20px;
+    margin-top: 28px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gallery__post:first-of-type {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  .gallery__container {
+    position: absolute;
+    bottom: 0;
+    background-color: fade(@text-bold-color, 30%);
+    color: @basic-color;
+  }
+
+  .gallery__post:nth-of-type(3) {
+    .gallery__container {
+      background-color: fade(@text-bold-color, 30%);
+    }
   }
 }

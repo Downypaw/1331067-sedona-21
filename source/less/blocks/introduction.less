@@ -18,6 +18,18 @@
 .introduction--form,
 .introduction--catalog {
   border-bottom: 1px solid @border-form-color;
+
+  .introduction__wrapper {
+    @media (min-width: @tablet-width) {
+      width: 458px;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .introduction--catalog {
+    border-bottom: none;
+  }
 }
 
 .introduction__title {
