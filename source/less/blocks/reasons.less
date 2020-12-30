@@ -25,6 +25,19 @@
   }
 }
 
+.reasons__extra-wrapper {
+  .container();
+  width: 262px;
+
+  @media (min-width: @tablet-width) {
+    width: 91.93%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1066px;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .reasons__wrapper {
     .container();
@@ -35,17 +48,4 @@
     .container();
     min-height: 324px;
   }
-}
-
-.reasons__extra-wrapper {
-  .container();
-  width: 262px;
-
-  @media (min-width: @tablet-width) {
-    width: 91.93%;
-  }
-
-  // @media (min-width: @desktop-width) {
-  //   width: 1120px;
-  // }
 }

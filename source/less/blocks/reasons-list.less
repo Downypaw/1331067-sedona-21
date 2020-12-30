@@ -3,14 +3,9 @@
 
   &__photo {
     .image();
+    width: 100%;
+    height: max-content;
   }
-}
-
-.reasons-list__item:nth-child(1) {
-  background-image: url("../img/photo-city.jpg");
-  background-position: 50% 0;
-  background-repeat: no-repeat;
-  background-size: 520px 260px;
 }
 
 @media (min-width: @tablet-width) {
@@ -19,16 +14,20 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .reasons-list__photo--1 {
-    grid-column-start: 2;
-    grid-column-end: 4;
+  .reasons-list__item:nth-of-type(1) {
+    .reasons-list__photo {
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
   }
 
-  .reasons-list__photo--2 {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
+  .reasons-list__item:nth-of-type(2) {
+    .reasons-list__photo {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
   }
 
   .reasons-list__item {

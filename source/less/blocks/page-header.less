@@ -15,98 +15,14 @@
   }
 }
 
-.page-header__menu-bar {
-  position: relative;
-  background-color: @basic-color;
-  z-index: 1;
-  min-height: 56px;
-  width: 100%;
-}
-
-.page-header__logo {
-  top: 0;
-  position: absolute;
-  left: 50%;
-  margin-left: -50.85px;
-  display: block;
-  z-index: 2;
-
-  @media (min-width: @tablet-width) {
-    z-index: 4;
-  }
-}
-
 @media (min-width: @desktop-width) {
   .page-header {
     background-color: @basic-color;
     .container();
   }
-
-  .page-header__logo::before {
-    content: "";
-    position: absolute;
-    width: 186.6px;
-    height: 96.43px;
-    background: url("../img/triangle.svg");
-    top: 0;
-    right: -42px;
-    z-index: -1;
-  }
-
-  .page-header__logo-image {
-    z-index: 5;
-  }
-}
-
-.page-header__toggle {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
-  width: 64px;
-  height: 56px;
-  cursor: pointer;
-  border: none;
-  background-color: @basic-color;
-}
-
-.page-header__toggle::before {
-  position: absolute;
-  right: 20px;
-  top: 16px;
-  content: "";
-  width: 22.9px;
-  height: 4px;
-  background-color: @highlight-color;
-  box-shadow: 0 9px 0 0 @highlight-color, 0 18px 0 0 @highlight-color;
-}
-
-.page-header__toggle:hover::before,
-.page-header__toggle:focus::before {
-  background-color: fade(@highlight-color, 60%);
-  box-shadow: 0 9px 0 0 fade(@highlight-color, 60%), 0 18px 0 0 fade(@highlight-color, 60%);
-}
-
-.page-header__toggle:active::before {
-  background-color: fade(@highlight-color, 30%);
-  box-shadow: 0 9px 0 0 fade(@highlight-color, 30%), 0 18px 0 0 fade(@highlight-color, 30%);
 }
 
 @media (min-width: @tablet-width) {
-  .page-header__toggle {
-    display: none;
-  }
-
-  .page-header__menu-bar {
-    position: absolute;
-    width: 102px;
-    height: 0;
-    top: 0;
-    z-index: 4;
-    left: 50%;
-    margin-left: -51px;
-  }
-
   .page-header__container {
     min-height: 518px;
     background-size: 461px 349.97px, 1200px 518px;

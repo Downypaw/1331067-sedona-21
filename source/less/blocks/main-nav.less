@@ -1,8 +1,4 @@
 .main-nav {
-  &__wrapper {
-    position: relative;
-  }
-
   &__list {
     .list();
     min-height: 223px;
@@ -18,7 +14,34 @@
     }
   }
 
-  &__close {
+  &__menu-bar {
+    position: relative;
+    background-color: @basic-color;
+    z-index: 1;
+    height: 56px;
+    width: 100%;
+  }
+
+  &--opened .main-nav__menu-bar {
+    position: static;
+  }
+
+  &__logo {
+    // top: 0;
+    // position: absolute;
+    // left: 50%;
+    // margin-left: -50.85px;
+    display: block;
+    width: 102px;
+    margin: 0 auto;
+    z-index: 2;
+
+    @media (min-width: @tablet-width) {
+      z-index: 4;
+    }
+  }
+
+  &--opened .main-nav__toggle {
     position: absolute;
     border: none;
     background-color: transparent;
@@ -62,12 +85,50 @@
   }
 }
 
+.main-nav__wrapper {
+  position: relative;
+}
+
 // .main-nav--closed .main-nav__toggle:active::before {
 //   background-color: fade(#ffffff, 30%);
 //   box-shadow:
 //     0 8px 0 0 fade(#ffffff, 30%),
 //     0 16px 0 0 fade(#ffffff, 30%);
 // }
+
+.main-nav--closed .main-nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 64px;
+  height: 56px;
+  cursor: pointer;
+  border: none;
+  background-color: @basic-color;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  position: absolute;
+  right: 20px;
+  top: 16px;
+  content: "";
+  width: 22.9px;
+  height: 4px;
+  background-color: @highlight-color;
+  box-shadow: 0 9px 0 0 @highlight-color, 0 18px 0 0 @highlight-color;
+}
+
+.main-nav--closed .main-nav__toggle:hover::before,
+.main-nav--closed .main-nav__toggle:focus::before {
+  background-color: fade(@highlight-color, 60%);
+  box-shadow: 0 9px 0 0 fade(@highlight-color, 60%), 0 18px 0 0 fade(@highlight-color, 60%);
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: fade(@highlight-color, 30%);
+  box-shadow: 0 9px 0 0 fade(@highlight-color, 30%), 0 18px 0 0 fade(@highlight-color, 30%);
+}
 
 .main-nav__item {
   background-color: @highlight-color;
@@ -191,6 +252,20 @@
   .main-nav__item:nth-of-type(2) {
     margin-right: 19.92%;
   }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__menu-bar {
+    position: absolute;
+    width: 102px;
+    height: 0;
+    top: 0;
+    z-index: 4;
+    left: 50%;
+    margin-left: -51px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -204,5 +279,20 @@
 
   .main-nav__item:nth-of-type(2) {
     margin-right: 20.3333%;
+  }
+
+  .main-nav__logo::before {
+    content: "";
+    position: absolute;
+    width: 186.6px;
+    height: 96.43px;
+    background: url("../img/triangle.svg");
+    top: 0;
+    right: -42px;
+    z-index: -1;
+  }
+
+  .main-nav__logo-image {
+    z-index: 5;
   }
 }
