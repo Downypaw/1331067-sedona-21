@@ -1,13 +1,24 @@
 .page-header {
   position: relative;
   background: url("../img/intro-triangle.svg") center bottom no-repeat;
-  border-bottom: 1px solid @basic-color;
 
   &__container {
     min-height: 389px;
     width: 100%;
-    background: url("../img/text.svg") 50% 50% no-repeat, url("../img/back-desktop.jpg") 50% 50%  no-repeat;
-    background-size: auto, 901px 389px;
+    background: url("../img/text.svg") 50% 50% no-repeat, url("../img/back-desktop.jpg") 50% 50%  no-repeat, url("../img/intro-triangle.svg");
+    background-size: auto, 901px 389px, auto;
+  }
+
+  &__container::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background: url("../img/intro-triangle.svg");
+    width: 1201px;
+    height: 57px;
+    bottom: -1px;
+    left: 50%;
+    margin-left: -600.5px;
   }
 
   @media (min-width: @tablet-width) {
