@@ -1,40 +1,151 @@
 .features-list {
-  padding-top: 295px;
   .list();
   display: grid;
   grid-template-columns: 1fr;
-  padding-left: 53px;
+  padding-top: 34px;
+  padding-bottom: 10px;
+
+  &__name {
+    margin: 0;
+    margin-bottom: 17px;
+    .title();
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 26px;
+    text-transform: uppercase;
+  }
+
+  &__item:nth-of-type(2) {
+    .features-list__text {
+      margin-top: 17px;
+    }
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__cerryover-desktop {
+    display: none;
+  }
+
+  &__item::before {
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: -48px;
+  }
+
+  &__item:nth-of-type(1)::before {
+    background: url("../img/icon-house.svg");
+    width: 39px;
+    height: 36.83px;
+  }
+
+  &__item:nth-of-type(2)::before {
+    background: url("../img/icon-gift.svg");
+    width: 32px;
+    height: 38px;
+    left: -45px;
+  }
+
+  &__item:nth-of-type(3)::before {
+    background: url("../img/icon-burger.svg");
+    width: 40px;
+    height: 34.9px;
+    top: -5px;
+    left: -52px;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    padding-left: 40px;
+  }
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 9%;
-    padding-left: 0;
+    padding-top: 154px;
+
+    &__wrapper {
+      width: 193px;
+      margin: 0 auto;
+    }
 
     &__name {
-      .title-desktop();
       text-align: center;
+      font-size: 21px;
+      line-height: 26px;
+      font-weight: bold;
+      margin-bottom: 23px;
     }
 
     &__text {
       text-align: center;
     }
 
+    &__item {
+      margin-left: 0;
+      box-sizing: border-box;
+    }
+
     &__item:nth-of-type(2) {
       order: 1;
+    }
+
+    &__item:nth-of-type(3) {
+      .features-list__wrapper {
+        width: 155px;
+      }
+    }
+
+    &__cerryover-desktop {
+      display: none;
     }
   }
 
   @media (min-width: @desktop-width) {
-    &__item:not(:last-of-type) {
-      margin-right: 8.67%;
+    grid-column-gap: 85px;
+    padding-top: 152px;
+
+    &__item {
+      width: 299px;
+      padding-left: 0;
+      padding-right: 0;
+      box-sizing: border-box;
+    }
+
+    &__wrapper {
+      width: 282px;
+      margin: 0 auto;
+    }
+
+    &__item:nth-of-type(3) {
+      padding: 0;
+      margin-top: -1px;
+      margin-left: 7px;
+
+      .features-list__wrapper {
+        width: 282px;
+      }
+    }
+
+    &__cerryover-desktop {
+      display: block;
+    }
+
+    &__item:nth-of-type(1) {
+      margin-left: -17px;
+    }
+
+    &__item:nth-of-type(2) {
+      padding: 0;
+      padding-left: 25px;
+    }
+
+    &__text {
+      font-size: 14px;
     }
   }
-
-  &__name {
-    .title();
-  }
-}
-
-.features-list__text {
-  text-transform: uppercase;
 }

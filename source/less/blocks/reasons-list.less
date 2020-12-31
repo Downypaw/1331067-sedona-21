@@ -1,32 +1,38 @@
 .reasons-list {
   .list();
 
-  &__item-wrapper {
-    .container();
+  &__photo {
+    .image();
+    width: 100%;
+    height: max-content;
   }
 }
 
-.reasons-list__item:nth-child(2) {
-  padding-bottom: 260px;
-}
-
 @media (min-width: @tablet-width) {
-  .reasons__list {
+  .reasons-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .reasons-list__item:nth-of-type(1) {
+    .reasons-list__photo {
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+  }
+
+  .reasons-list__item:nth-of-type(2) {
+    .reasons-list__photo {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
   }
 
   .reasons-list__item {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .reasons__extra-content {
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    min-height: 330px;
   }
 
   .reasons-list__item:nth-child(1) {

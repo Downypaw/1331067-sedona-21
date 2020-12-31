@@ -12,11 +12,18 @@
     width: 648px;
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 18px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .page-footer {
+    background-color: @basic-color;
+    .container();
+  }
+
   .page-footer__wrapper {
-    width: 880px;
+    width: 960px;
+    padding-top: 16px;
   }
 }

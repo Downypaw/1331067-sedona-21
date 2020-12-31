@@ -1,16 +1,42 @@
 .page-header {
-  min-height: 445px;
   position: relative;
+  background: url("../img/intro-triangle.svg") center bottom no-repeat;
+
+  &__container {
+    min-height: 389px;
+    width: 100%;
+    background: url("../img/text.svg") 50% 50% no-repeat, url("../img/back-desktop.jpg") 50% 50%  no-repeat, url("../img/intro-triangle.svg");
+    background-size: auto, 901px 389px, auto;
+  }
+
+  &__container::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background: url("../img/intro-triangle.svg");
+    width: 1201px;
+    height: 57px;
+    bottom: -1px;
+    left: 50%;
+    margin-left: -600.5px;
+  }
 
   @media (min-width: @tablet-width) {
     min-height: 518px;
   }
 }
 
-.page-header__logo {
-  order: 3;
-  position: absolute;
-  left: 50%;
-  margin-left: -50.85px;
-  display: block;
+@media (min-width: @desktop-width) {
+  .page-header {
+    background-color: @basic-color;
+    .container();
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__container {
+    min-height: 518px;
+    background-size: 461px 349.97px, 1200px 518px;
+    background-position: 50% 77px, 50% 50%;
+  }
 }
