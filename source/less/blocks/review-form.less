@@ -77,7 +77,14 @@
   margin-top: 20px;
 }
 
-.review-form__part:last-of-type {
+.review-form__part:nth-of-type(4) {
+  margin-top: 15px;
+  .review-form__legend {
+    margin-left: -2px;
+  }
+}
+
+.review-form__part:nth-of-type(5) {
   border-bottom: none;
 }
 
@@ -89,25 +96,31 @@
 .review-form__comment {
   margin-top: 15px;
   border: none;
+  box-sizing: border-box;
   background-color: @input-color;
   resize: none;
   height: 160px;
-  margin-bottom: 51px;
+  margin-bottom: 45px;
   .input();
   .title();
   text-transform: none;
-  width: 100%;
-  font-family: "PT Sans" "Arial", sans-serif;
+  width: 100% - 1px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  padding-left: 21px;
+  padding-top: 12px;
 }
 
 .review-form__comment::placeholder {
   .title();
   text-transform: none;
+  width: 100%;
 }
 
 .review-form__submit {
   .button();
   font-size: 21px;
-  width: 100%;
-  margin-bottom: 48px;
+  width: 100% - 1px;
+  margin-bottom: 38px;
+  padding-top: 6px;
+  font-family: "PT Sans", "Arial", sans-serif;
 }

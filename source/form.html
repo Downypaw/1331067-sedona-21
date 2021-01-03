@@ -9,14 +9,10 @@
   <body class="page__body">
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a class="page-header__logo">
-          <img src="https://via.placeholder.com/102x84" alt="Логотип">
-        </a>
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
           <div class="main-nav__wrapper">
-            <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
               <ul class="main-nav__list">
-                <li class="main-nav__item">
+                <li class="main-nav__item main-nav__item--active">
                   <a class="main-nav__link" href="index.html">
                     Главная
                   </a>
@@ -37,8 +33,16 @@
                   </a>
                 </li>
               </ul>
+              <div class="main-nav__menu-bar">
+                <a class="main-nav__logo">
+                  <img class="main-nav__logo-image" src="img/logotype.svg" alt="Логотип">
+                </a>
+                <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+              </div>
           </div>
         </nav>
+        <div class="page-header__container page-header__container--form">
+        </div>
       </div>
     </header>
     <main class="page-main">
@@ -46,13 +50,13 @@
         <div class="introduction__wrapper">
           <h1 class="introduction__title">Оставьте свой отзыв</h1>
           <p class="introduction__text">
-            Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о поснщённых вами достопримечательностях
+            Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещённых вами достопримечательностях
           </p>
         </div>
       </section>
         <form class="review-form" method="post" name="form-review" action="https://echo.htmlacademy.ru">
-          <div class="review-form__wrapper">
-            <fieldset class="review-form__part review-form__part--right">
+          <fieldset class="review-form__part review-form__part--right">
+            <div class="review-form__wrapper">
               <legend class="review-form__legend" for="name">Представьтесь:</legend>
               <ul class="review-form__initials initials">
                 <li class="initials__item">
@@ -68,25 +72,29 @@
                   <input class="initials__input" type="text" name="patronymic-field" id="patronymic" placeholder="Александрович">
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="review-form__part">
+            </div>
+          </fieldset>
+          <fieldset class="review-form__part">
+            <div class="review-form__wrapper">
               <legend class="review-form__legend">Контактная информация:</legend>
               <ul class="review-form__contacts form-contacts">
                 <li class="form-contacts__item">
-                  <label class="form-contacts__label" for="phone">Контактный телефон:</label>
+                  <label class="form-contacts__label" for="phone">Контактный телефон*:</label>
                   <div class="form-contacts__input-wrapper form-contacts__input-wrapper--phone">
                     <input class="form-contacts__input" type="tel" name="phone-field" id="phone" placeholder="Введите телефон">
                   </div>
                 </li>
                 <li class="form-contacts__item">
-                  <label class="form-contacts__label" for="email">Электронная почта:</label>
+                  <label class="form-contacts__label" for="email">Электронная почта*:</label>
                   <div class="form-contacts__input-wrapper form-contacts__input-wrapper--email">
                     <input class="form-contacts__input" type="email" name="email-field" id="email" placeholder="Введите e-mail">
                   </div>
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="review-form__part review-form__part--left">
+            </div>
+          </fieldset>
+          <fieldset class="review-form__part review-form__part--left">
+            <div class="review-form__wrapper">
               <legend class="review-form__legend">Ваше общее впечатление:</legend>
               <ul class="review-form__impression form-impression">
                 <li class="form-impression__item">
@@ -102,9 +110,11 @@
                   <label class="form-impression__option" for="indefinitely">Затрудняюсь ответить</label>
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="review-form__part">
-              <legend class="review-form__legend">Посещённые достопримечательности:</legend>
+            </div>
+          </fieldset>
+          <fieldset class="review-form__part">
+            <div class="review-form__wrapper">
+              <legend class="review-form__legend">Посещенные достопримечательности:</legend>
               <ul class="review-form__attractions form-attractions">
                 <li class="form-attractions__item">
                   <input class="form-attractions__checkbox visually-hidden" type="checkbox" name="attraction" id="bridge" value="Мост Дьявола" checked>
@@ -123,14 +133,18 @@
                   <label class="form-attractions__option" for="red-rocks">Красные скалы</label>
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="review-form__part">
+            </div>
+          </fieldset>
+          <fieldset class="review-form__part">
+            <div class="review-form__wrapper">
               <legend class="review-form__legend">Опишите свои эмоции:</legend>
               <textarea class="review-form__comment" placeholder="Опишите подробно все свои восторги"></textarea>
-            </fieldset>
+            </div>
+          </fieldset>
+          <div class="review-form__wrapper">
             <button class="review-form__submit" type="submit">Отправить отзыв</button>
-            <span class="review-form__note">* — обязательные поля</span>
           </div>
+          <span class="review-form__note">* — обязательные поля</span>
         </form>
     </main>
     <footer class="page-footer">
@@ -152,35 +166,40 @@
             </li>
           </ul>
         </div>
-        <p class="page-footer__developer developer">
-          Разработано
-          <a class="developer__link visually-hidden" href="https://htmlacademy.ru/intensive/adaptive">
-            Html Academy
-          </a>
-        </p>
+        <a class="developer" href="https://htmlacademy.ru/intensive/adaptive">
+          Разработано <span class="visually-hidden">Html Academy</span>
+          <svg class="developer__logo" xmlns="http://www.w3.org/2000/svg" width="27" height="35" viewBox="0 0 27 35" fill="none">
+            <path d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z" fill="black"/>
+          </svg>
+        </a>
       </div>
     </footer>
     <section class="popup-failure">
-      <div class="popup-failure__wrapper">
-        <h2 class="popup-failure__title">Что-то пошло не так!</h2>
-        <p class="popup-failure__message">
-          Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
-        </p>
-        <button class="popup-failure__close">ОК</button>
+      <div class="popup-failure__modal">
+        <div class="popup-failure__wrapper">
+          <h2 class="popup-failure__title">Что-то пошло не так!</h2>
+          <p class="popup-failure__message">
+            Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+          </p>
+          <button class="popup-failure__close">ОК</button>
+        </div>
       </div>
     </section>
     <section class="popup-success">
-      <div class="popup-success__wrapper">
-        <h2 class="popup-success__title">Ваш отзыв отправлен!</h2>
-        <p class="popup-success__message">
-          Спасибо за ваше участие, ваш отзыв уже поступил к нам, в ближайшее время мы опубликуем его на сайте.
-        </p>
-    </div>
-    <div class="popup-success__buttom">
-      <div class="popup-success__buttom-wrapper">
-        <button class="popup-success__close">Закрыть окно</button>
-      </div>
-    </div>
+      <!-- <div class="popup-success__modal"> -->
+        <div class="popup-success__wrapper">
+          <h2 class="popup-success__title">Ваш отзыв отправлен!</h2>
+          <p class="popup-success__message">
+            Спасибо за ваше участие, ваш отзыв уже поступил к нам, в ближайшее время мы опубликуем его на сайте.
+          </p>
+        </div>
+        <div class="popup-success__buttom">
+          <div class="popup-success__buttom-wrapper">
+            <button class="popup-success__close">Закрыть окно</button>
+          </div>
+        </div>
+      <!-- </div> -->
     </section>
+    <script src="js/script.js"></script>
   </body>
 </html>

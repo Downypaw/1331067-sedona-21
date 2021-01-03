@@ -5,8 +5,8 @@
   &__container {
     min-height: 389px;
     width: 100%;
-    background: url("../img/text.svg") 50% 50% no-repeat, url("../img/back-desktop.jpg") 50% 50%  no-repeat, url("../img/intro-triangle.svg");
-    background-size: auto, 901px 389px, auto;
+    background: url("../img/text.svg") 50% 50% no-repeat, url("../img/back-desktop.jpg") 50% 50%  no-repeat;
+    background-size: auto, 901px 389px;
   }
 
   &__container::before {
@@ -19,6 +19,13 @@
     bottom: -1px;
     left: 50%;
     margin-left: -600.5px;
+  }
+
+  &__container--form {
+    min-height: 158px;
+    background: none;
+    background: url("../img/sedona.svg") 50% 52px no-repeat, url("../img/back-desktop.jpg") 50% -231px  no-repeat;
+    background-size: auto, 901px 389px;
   }
 
   @media (min-width: @tablet-width) {

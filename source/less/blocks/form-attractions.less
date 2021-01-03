@@ -1,4 +1,5 @@
 .form-attractions {
+  padding-top: 1px;
   margin-top: 36px;
 
   @media (min-width: @tablet-width) {
@@ -17,20 +18,36 @@
 .form-attractions__option {
   .label();
   position: relative;
-  margin-left: 78px;
+  margin-left: 80px;
   display: inline-block;
   vertical-align: middle;
   margin-bottom: 54px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: none;
+  margin-top: -1px;
+}
+
+.form-attractions__item:nth-of-type(3),
+.form-attractions__item:nth-of-type(4) {
+  margin-top: 1px;
+}
+
+.form-attractions__item:last-of-type {
+  .form-attractions__option {
+    margin-bottom: 40px;
+  }
 }
 
 .form-attractions__checkbox + .form-attractions__option::before {
   content: "";
-  width: 46px;
-  height: 46px;
+  width: 56px;
+  height: 56px;
   position: absolute;
   background-color: @input-color;
-  left: -74px;
-  top: -15px;
+  left: -79px;
+  top: -17px;
 }
 
 .form-attractions__checkbox:checked + .form-attractions__option::after {
@@ -39,5 +56,19 @@
   height: 16.23px;
   position: absolute;
   background: url("../img/tick.svg");
-  left: -64px;
+  left: -63px;
+  top: 5px;
+}
+
+.form-attractions__checkbox:hover:checked + .form-attractions__option::before,
+.form-attractions__checkbox:focus:checked + .form-attractions__option::before {
+  background-color: @border-form-color;
+}
+
+.form-attractions__checkbox:active:checked + .form-attractions__option::before {
+  background-color: @dark-input-color;
+}
+
+.form-attractions__checkbox:active:checked + .form-attractions__option::after {
+  opacity: 0.3;
 }

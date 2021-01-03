@@ -1,10 +1,36 @@
 .initials {
+  padding-top: 20px;
   padding-bottom: 5px;
 }
 
 .initials__label {
   .label();
   margin-right: 10px;
+  margin-top: 18px;
+}
+
+.initials__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.initials__item:nth-of-type(1) {
+  .initials__input {
+    width: 230px;
+  }
+}
+
+.initials__item:nth-of-type(2) {
+  .initials__input {
+    width: 192px;
+  }
+}
+
+.initials__item:nth-of-type(3) {
+  .initials__input {
+    width: 194px;
+  }
 }
 
 .initials__input {
@@ -12,6 +38,8 @@
   margin-bottom: 20px;
   .title();
   text-transform: none;
+  padding-top: 3px;
+  padding-left: 21px;
 
   @media (min-width: @tablet-width) {
     width: 178px;
@@ -25,4 +53,6 @@
 .initials__input::placeholder {
   .title();
   text-transform: none;
+  font-size: 18px;
+  font-family: "PT Sans", "Arial", sans-serif;
 }

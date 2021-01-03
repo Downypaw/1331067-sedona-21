@@ -9,25 +9,48 @@
   margin-bottom: 43px;
   display: inline-block;
   vertical-align: middle;
+  text-transform: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.form-impression__item:last-of-type {
+  .form-impression__option {
+    margin-bottom: 41px;
+  }
 }
 
 .form-impression__button + .form-impression__option::before {
   content: "";
-  width: 48px;
-  height: 48px;
+  width: 55px;
+  height: 55px;
   position: absolute;
   border-radius: 50%;
   background-color: @input-color;
-  left: -74px;
+  left: -77px;
   top: -15px;
 }
 
 .form-impression__button:checked + .form-impression__option::after {
   content: "";
-  width: 18px;
-  height: 18px;
+  width: 21px;
+  height: 21px;
   position: absolute;
   border-radius: 50%;
   background-color: @text-color;
   left: -60px;
+  top: 1px;
+}
+
+.form-impression__button:hover:checked + .form-impression__option::before,
+.form-impression__button:focus:checked + .form-impression__option::before {
+  background-color: @border-form-color;
+}
+
+.form-impression__button:active:checked + .form-impression__option::before {
+  background-color: @dark-input-color;
+}
+
+.form-impression__button:active:checked + .form-impression__option::after {
+  opacity: 0.3;
 }
