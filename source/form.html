@@ -79,7 +79,7 @@
               <legend class="review-form__legend">Контактная информация:</legend>
               <ul class="review-form__contacts form-contacts">
                 <li class="form-contacts__item">
-                  <label class="form-contacts__label" for="phone">Контактный телефон*:</label>
+                  <label class="form-contacts__label" for="phone"><span class="form-contacts__clarification">Контактный</span> телефон*:</label>
                   <div class="form-contacts__input-wrapper form-contacts__input-wrapper--phone">
                     <input class="form-contacts__input" type="tel" name="phone-field" id="phone" placeholder="Введите телефон">
                   </div>
@@ -141,7 +141,7 @@
               <textarea class="review-form__comment" placeholder="Опишите подробно все свои восторги"></textarea>
             </div>
           </fieldset>
-          <div class="review-form__wrapper">
+          <div class="review-form__wrapper review-form__wrapper--button">
             <button class="review-form__submit" type="submit">Отправить отзыв</button>
           </div>
           <span class="review-form__note">* — обязательные поля</span>
@@ -186,11 +186,11 @@
       </div>
     </section>
     <section class="popup-success">
-      <!-- <div class="popup-success__modal"> -->
+      <div class="popup-success__modal">
         <div class="popup-success__wrapper">
           <h2 class="popup-success__title">Ваш отзыв отправлен!</h2>
           <p class="popup-success__message">
-            Спасибо за ваше участие, ваш отзыв уже поступил к нам, в ближайшее время мы опубликуем его на сайте.
+            Спасибо за ваше участие, ваш отзыв уже поступил к нам. <br> В ближайшее время мы опубликуем его на сайте.
           </p>
         </div>
         <div class="popup-success__buttom">
@@ -198,7 +198,7 @@
             <button class="popup-success__close">Закрыть окно</button>
           </div>
         </div>
-      <!-- </div> -->
+      </div>
     </section>
     <script src="js/script.js"></script>
   </body>

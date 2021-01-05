@@ -12,11 +12,21 @@
   text-transform: none;
   font-weight: bold;
   font-size: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 17px;
+    margin-left: 75px;
+    margin-bottom: 35px;
+  }
 }
 
 .form-impression__item:last-of-type {
   .form-impression__option {
     margin-bottom: 41px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+    }
   }
 }
 

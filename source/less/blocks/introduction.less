@@ -18,20 +18,40 @@
 .introduction--form,
 .introduction--catalog {
   border-bottom: 1px solid @border-form-color;
-  padding-top: 35px;
+  padding-top: 52px;
   padding-left: 3px;
   background: none;
   padding-bottom: 2px;
 
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+    margin-bottom: 20px;
+  }
+
+  .introduction__title {
+    font-size: 30px;
+    line-height: 26px;
+  }
+
   .introduction__wrapper {
     width: 300px;
     @media (min-width: @tablet-width) {
-      width: 458px;
+      width: 440px;
     }
   }
 
   .introduction__text {
     margin-left: -1px;
+
+    @media (min-width: @tablet-width) {
+      margin-left: -4px;
+      margin-top: 34px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: -6px;
+      margin-right: 2px;
+    }
   }
 }
 
@@ -83,10 +103,15 @@
   }
 
   .introduction__wrapper {
-    margin-top: 23px;
+    margin-top: 61px;
+  }
+
+  .introduction__title {
+    margin-left: -1px;
   }
 
   .introduction__text {
     margin-top: 32px;
+    margin-left: -6px;
   }
 }

@@ -1,17 +1,32 @@
 .popup-success {
-  padding-top: 38px;
+  .modal-window();
+
+  &__modal {
+    .modal();
+    min-height: 323px;
+    box-sizing: border-box;
+
+    @media (min-width: @tablet-width) {
+      min-height: 347px;
+      width: 640px;
+    }
+  }
 
   &__wrapper {
     .container();
+    width: 240px;
+    padding-top: 21px;
 
     @media (min-width: @tablet-width) {
       width: 457px;
+      padding-top: 28px;
     }
   }
 
   &__title {
     .title();
     text-align: center;
+    margin-left: -5px;
 
     @media (min-width: @tablet-width) {
       font-size: 30px;
@@ -20,12 +35,26 @@
 
   &__message {
     .popup-text();
+    margin-left: -5px;
+    margin-top: 28px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 32px;
+      margin-left: -2px;
+    }
   }
 
   &__buttom {
     background-color: @input-color;
+    margin-top: 40px;
     padding-top: 20px;
     padding-bottom: 20px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 42px;
+      padding-top: 45px;
+      padding-bottom: 45px;
+    }
   }
 
   &__buttom-wrapper {
@@ -39,9 +68,12 @@
   &__close {
     .button();
     width: 100%;
+    font-family: "PT Sans", "Arial", sans-serif;
+    padding-left: 2px;
 
     @media (min-width: @tablet-width) {
       font-size: 21px;
+      padding-top: 5px;
     }
   }
 }
