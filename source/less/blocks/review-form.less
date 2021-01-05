@@ -33,6 +33,7 @@
 
 .review-form__part:nth-of-type(4) {
   margin-top: 15px;
+
   .review-form__legend {
     margin-left: -2px;
   }
@@ -45,8 +46,12 @@
 .review-form__legend {
   .title();
   text-align: center;
-  font-size: 21px;
+  font-size: 18px;
   line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .review-form__comment {
@@ -107,6 +112,10 @@
       margin-left: 0;
       margin-right: 0;
     }
+
+    .review-form__legend {
+      margin-left: -2px;
+    }
   }
 
   .review-form__part:nth-of-type(1) {
@@ -114,8 +123,12 @@
     border-bottom: 0;
 
     .review-form__wrapper {
-      width: 303px;
+      width: 265px;
       margin-right: 0;
+    }
+
+    .review-form__legend {
+      margin-left: -3px;
     }
   }
 
@@ -128,7 +141,7 @@
     border-bottom: 0;
     margin-top: 82px;
     position: relative;
-    padding-top: 20px;
+    padding-top: 19px;
 
     .review-form__legend {
       padding: 0 46px;
@@ -149,6 +162,7 @@
 
   .review-form__part:nth-of-type(4) {
     margin-top: 78px;
+
     .review-form__legend {
       top: -29px;
     }
@@ -159,25 +173,11 @@
     padding-top: 55px;
   }
 
-  .review-form__legend {
-    margin-right: auto;
-    font-size: 21px;
-    line-height: 26px;
-    margin-left: -2px;
-    margin-bottom: 55px;
-  }
-
-  .review-form__part:nth-of-type(1) {
-    .review-form__wrapper {
-      width: 265px;
-      margin-right: 0;
-    }
-  }
-
   .review-form__part:nth-of-type(1),
   .review-form__part:nth-of-type(3) {
     .review-form__legend {
       text-align: left;
+      margin-bottom: 56px;
     }
   }
 
@@ -276,7 +276,11 @@
   }
 
   .review-form__part:nth-of-type(5) {
-    margin-top: 28px;
+    margin-top: 30px;
+  }
+
+  .review-form__comment {
+    margin-bottom: 50px;
   }
 
   .review-form__wrapper--button {

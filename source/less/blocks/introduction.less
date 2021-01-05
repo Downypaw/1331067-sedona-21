@@ -18,7 +18,7 @@
 .introduction--form,
 .introduction--catalog {
   border-bottom: 1px solid @border-form-color;
-  padding-top: 52px;
+  padding-top: 35px;
   padding-left: 3px;
   background: none;
   padding-bottom: 2px;
@@ -26,17 +26,25 @@
   @media (min-width: @tablet-width) {
     border-bottom: none;
     margin-bottom: 20px;
-  }
+    padding-top: 52px;
 
-  .introduction__title {
-    font-size: 30px;
-    line-height: 26px;
+    .introduction__title {
+      font-size: 30px;
+      line-height: 26px;
+    }
   }
 
   .introduction__wrapper {
     width: 300px;
+
     @media (min-width: @tablet-width) {
       width: 440px;
+    }
+
+    @media (min-width: @desktop-width) {
+      .introduction__title {
+        margin-left: -4px;
+      }
     }
   }
 
