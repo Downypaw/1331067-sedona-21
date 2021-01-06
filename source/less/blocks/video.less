@@ -1,11 +1,19 @@
 .video {
   position: relative;
-  padding-top: 33px;
+  padding-top: 17px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 32px;
+  }
 
   &__wrapper-part {
     .container();
     position: relative;
-    width: 87.5%;
+    width: 281px;
+  }
+
+  &__wrapper-part--text {
+    width: 240px;
   }
 
   &__title {
@@ -17,22 +25,39 @@
     }
   }
 
+  &__frame::poster {
+    width: 100%;
+
+    @media (min-width: @tablet-width) {
+      height: 547px;
+      width: auto;
+    }
+  }
+
   &__description {
     text-align: center;
     text-transform: uppercase;
     line-height: 24px;
     margin-bottom: 33px;
+    margin-top: 28px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 33px;
+      margin-bottom: 33px;
+    }
   }
 
   &__frame {
     display: block;
     position: relative;
+    background-image: url('../img/video-desktop.jpg');
+    background-size: cover;
   }
 
   &__controls {
     background-color: @input-color;
     min-height: 66px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     position: relative;
 
     @media (min-width: @tablet-width) {
@@ -54,11 +79,9 @@
 
     @media (min-width: @tablet-width) {
       bottom: 0;
-    }
-
-    @media (min-width: @tablet-width) {
       padding-left: 93px;
       padding-right: 166px;
+      min-height: 93px;
     }
   }
 
@@ -67,6 +90,10 @@
     background-color: fade(@basic-color, 20%);
     height: 3px;
     margin-top: 22px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 45px;
+    }
   }
 
   &__toggle {
@@ -84,7 +111,6 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
-    margin-top: 22px;
     position: absolute;
     z-index: 1;
 
@@ -96,24 +122,38 @@
   }
 
   &__replay {
-    width: 16px;
-    height: 20px;
-    background: url("../img/replay.svg");
-    left: 25px;
+    width: 66px;
+    height: 66px;
+  }
+
+  .video__replay:hover .video__replay-icon path,
+  .video__subtitles:hover .video__subtitles-icon path,
+  .video__fullscreen:hover .video__fullscreen-icon path,
+  .video__replay:focus .video__replay-icon path,
+  .video__subtitles:focus .video__subtitles-icon path,
+  .video__fullscreen:focus .video__fullscreen-icon path {
+    fill: @text-color;
+  }
+
+  .video__replay:active .video__replay-icon path,
+  .video__subtitles:active .video__subtitles-icon path,
+  .video__fullscreen:active .video__fullscreen-icon path {
+    fill: @text-color;
+    opacity: 0.3;
   }
 
   &__subtitles {
-    width: 32px;
-    height: 20px;
-    background: url("../img/subtitles.svg");
-    right: 71px;
+    width: 66px;
+    height: 66px;
+    right: 75px;
+    top: 1px;
   }
 
   &__fullscreen {
-    width: 20px;
-    height: 20px;
-    background: url("../img/fullscreen.svg");
+    width: 66px;
+    height: 66px;
     right: 23px;
+    top: 1px;
   }
 }
 
@@ -122,9 +162,14 @@
     width: 648px;
   }
 
-  .video__frame,
   .video__wrapper-part--text {
-    .container();
+    margin: 0 auto;
     width: 445px;
+  }
+
+  .video__frame {
+    width: 648px;
+    margin: 0 auto;
+    height: 547px;
   }
 }

@@ -26,12 +26,6 @@
   }
 }
 
-@media (min-width: @tablet-width) {
-  .introduction--catalog {
-    border-bottom: none;
-  }
-}
-
 .introduction__title {
   margin: 0;
   margin-right: 3px;
@@ -47,6 +41,41 @@
 
   &--main-page {
     line-height: 26px;
+  }
+}
+
+.introduction--catalog {
+  padding-left: 4px;
+  background-image: none;
+  padding-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 53px;
+
+    .introduction__text {
+      margin-top: 33px;
+    }
+  }
+
+  .introduction__wrapper {
+    width: 275px;
+
+    @media (min-width: @tablet-width) {
+      width: 445px;
+      padding-right: 5px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    .introduction__title {
+      font-size: 30px;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .introduction--catalog {
+    border-bottom: none;
   }
 }
 

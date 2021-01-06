@@ -22,10 +22,13 @@
   }
 
   @media (min-width: @tablet-width) {
-    min-height: 518px;
+    &__container {
+      min-height: 518px;
+      background-size: 461px 349.97px, 1200px 518px;
+      background-position: 50% 77px, 50% 50%;
+    }
   }
 
-  &__container--form,
   &__container--catalog {
     min-height: 158px;
     background: url("../img/sedona.svg") 50% 52px no-repeat, url("../img/back-desktop.jpg") 50% -231px  no-repeat;
@@ -49,13 +52,5 @@
   .page-header {
     background-color: @basic-color;
     .container();
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .page-header__container {
-    min-height: 518px;
-    background-size: 461px 349.97px, 1200px 518px;
-    background-position: 50% 77px, 50% 50%;
   }
 }
