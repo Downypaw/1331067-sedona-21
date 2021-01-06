@@ -24,6 +24,25 @@
   @media (min-width: @tablet-width) {
     min-height: 518px;
   }
+
+  &__container--form,
+  &__container--catalog {
+    min-height: 158px;
+    background: url("../img/sedona.svg") 50% 52px no-repeat, url("../img/back-desktop.jpg") 50% -231px  no-repeat;
+    background-size: auto, 901px 389px;
+
+    @media (min-width: @tablet-width) {
+      min-height: 288px;
+      background: url("../img/sedona.svg") 50% 95px no-repeat, url("../img/back-desktop.jpg") 50% -229px  no-repeat;
+      background-size: 456.9px 77.6px, 1200px 518px;
+    }
+
+    @media (min-width: @desktop-width) {
+      min-height: 300px;
+      background: url("../img/sedona.svg") 369px 102px no-repeat, url("../img/back-desktop.jpg") 50% -217px  no-repeat;
+      background-size: 456.9px 77.6px, 1200px 518px;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
