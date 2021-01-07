@@ -1,16 +1,6 @@
 .form-contacts {
-  padding-top: 16px;
+  padding-top: 17px;
   padding-bottom: 12px;
-
-  @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-top: 66px;
-
-    &__clarification {
-      display: none;
-    }
-  }
 }
 
 .form-contacts__label {
@@ -98,6 +88,7 @@
 @media (min-width: @tablet-width) {
   .form-contacts {
     padding-bottom: 0;
+    padding-top: 16px;
   }
 
   .form-contacts__item:nth-of-type(2) {
@@ -112,6 +103,16 @@
 }
 
 @media (min-width: @desktop-width) {
+  .form-contacts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 66px;
+
+    &__clarification {
+      display: none;
+    }
+  }
+
   .form-contacts__input-wrapper {
     display: inline-block;
     vertical-align: baseline;
