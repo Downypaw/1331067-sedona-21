@@ -1,6 +1,6 @@
 .initials {
   padding-top: 20px;
-  padding-bottom: 5px;
+  padding-bottom: 3px;
 
   @media (min-width: @tablet-width) {
     padding-top: 0;
@@ -10,14 +10,14 @@
 
 .initials__label {
   .label();
-  margin-right: 10px;
-  margin-top: 18px;
 }
 
 .initials__item {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .initials__item:nth-of-type(1) {
@@ -64,7 +64,6 @@
 
 .initials__input {
   .input();
-  margin-bottom: 20px;
   .title();
   text-transform: none;
   padding-top: 3px;

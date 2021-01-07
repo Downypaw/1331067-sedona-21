@@ -1,4 +1,5 @@
 .review-form {
+
   &__initials,
   &__contacts,
   &__impression,
@@ -41,6 +42,7 @@
 
 .review-form__part:nth-of-type(5) {
   border-bottom: none;
+  margin-bottom: 45px;
 }
 
 .review-form__legend {
@@ -61,14 +63,15 @@
   background-color: @input-color;
   resize: none;
   height: 160px;
-  margin-bottom: 45px;
   .input();
   .title();
   text-transform: none;
   width: 100% - 1px;
   font-family: "PT Sans", "Arial", sans-serif;
   padding-left: 21px;
+  padding-right: 21px;
   padding-top: 12px;
+  padding-bottom: 12px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 52px;
