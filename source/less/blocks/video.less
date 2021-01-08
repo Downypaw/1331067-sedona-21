@@ -25,15 +25,6 @@
     }
   }
 
-  &__frame::poster {
-    width: 100%;
-
-    @media (min-width: @tablet-width) {
-      height: 547px;
-      width: auto;
-    }
-  }
-
   &__description {
     text-align: center;
     text-transform: uppercase;
@@ -51,7 +42,7 @@
     width: 100%;
     display: block;
     position: relative;
-    background-image: url('../img/video-desktop.jpg');
+    background-image: url("../img/video-desktop.jpg");
     background-size: cover;
     height: 201px;
   }
@@ -155,7 +146,7 @@
     padding-top: 1px;
     width: 66px;
     height: 66px;
-    right: 0px;
+    right: 0;
   }
 }
 
@@ -200,7 +191,7 @@
     width: 648px;
     margin: 0 auto;
     height: 547px;
-    background-image: url('../img/video-desktop.jpg');
+    background-image: url("../img/video-desktop.jpg");
     background-size: 800px 500px;
     background-position: 50% 48px;
     background-repeat: no-repeat;
