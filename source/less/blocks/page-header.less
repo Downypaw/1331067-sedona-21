@@ -1,28 +1,40 @@
 .page-header {
   position: relative;
-  background: url("../img/intro-triangle.svg") center bottom no-repeat;
+
 
   &__container {
+    border-bottom: 1px solid @basic-color;
     min-height: 389px;
     width: 100%;
-    background: url("../img/text.svg") 50% 50% no-repeat, url("../img/back-desktop.jpg") 50% 50%  no-repeat, url("../img/intro-triangle.svg");
-    background-size: auto, 901px 389px, auto;
-  }
-
-  &__container::before {
-    content: "";
-    position: absolute;
-    display: block;
-    background: url("../img/intro-triangle.svg");
-    width: 1201px;
-    height: 57px;
-    bottom: -1px;
-    left: 50%;
-    margin-left: -600.5px;
+    background: url("../img/intro-triangle.svg") no-repeat center bottom, url("../img/text.svg") 50% 50% no-repeat, url("../img/back-desktop.jpg") 50% 50%  no-repeat, @highlight-color;
+    background-size: auto, auto, 901px 389px;
+    z-index: 9;
   }
 
   @media (min-width: @tablet-width) {
-    min-height: 518px;
+    &__container {
+      min-height: 518px;
+      background-size: auto, 461px 349.97px, 1200px 518px;
+      background-position: center bottom, 50% 77px, 50% 0;
+    }
+  }
+
+  &__container--form {
+    min-height: 158px;
+    background: url("../img/intro-triangle.svg") no-repeat center bottom, url("../img/sedona.svg") 50% 52px no-repeat, url("../img/back-desktop.jpg") 50% -231px  no-repeat, @highlight-color;
+    background-size: auto, auto, 901px 389px;
+
+    @media (min-width: @tablet-width) {
+      min-height: 288px;
+      background: url("../img/intro-triangle.svg") no-repeat center bottom, url("../img/sedona.svg") 50% 95px no-repeat, url("../img/back-desktop.jpg") 50% -229px  no-repeat @highlight-color;
+      background-size: auto, 456.9px 77.6px, 1200px 518px;
+    }
+
+    @media (min-width: @desktop-width) {
+      min-height: 300px;
+      background: url("../img/intro-triangle.svg") no-repeat center bottom, url("../img/sedona.svg") 369px 102px no-repeat, url("../img/back-desktop.jpg") 50% -217px  no-repeat @highlight-color;
+      background-size: auto, 456.9px 77.6px, 1200px 518px;
+    }
   }
 }
 
@@ -33,10 +45,8 @@
   }
 }
 
-@media (min-width: @tablet-width) {
-  .page-header__container {
-    min-height: 518px;
-    background-size: 461px 349.97px, 1200px 518px;
-    background-position: 50% 77px, 50% 50%;
-  }
+@media (min-width: @desktop-width) {
+  // .page-header__wrapper {
+  //   box-shadow: 0 5px 15px fade(@modal-shadow-color, 20%);
+  // }
 }
