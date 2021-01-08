@@ -9,7 +9,7 @@
   &__wrapper-part {
     .container();
     position: relative;
-    width: 281px;
+    width: 87.5%;
   }
 
   &__wrapper-part--text {
@@ -48,10 +48,12 @@
   }
 
   &__frame {
+    width: 100%;
     display: block;
     position: relative;
     background-image: url('../img/video-desktop.jpg');
     background-size: cover;
+    height: 201px;
   }
 
   &__controls {
@@ -143,21 +145,48 @@
   }
 
   &__subtitles {
-    width: 66px;
+    width: 49px;
     height: 66px;
-    right: 75px;
-    top: 1px;
+    right: 66px;
+    padding-top: 2px;
   }
 
   &__fullscreen {
+    padding-top: 1px;
     width: 66px;
     height: 66px;
-    right: 23px;
-    top: 1px;
+    right: 0px;
   }
 }
 
 @media (min-width: @tablet-width) {
+  .video {
+    padding-bottom: 40px;
+
+    .video__replay-icon path,
+    .video__subtitles-icon path,
+    .video__fullscreen-icon path {
+      fill: @basic-color;
+    }
+
+    .video__replay:hover .video__replay-icon path,
+    .video__replay:focus .video__replay-icon path,
+    .video__subtitles:hover .video__subtitles-icon path,
+    .video__subtitles:focus .video__subtitles-icon path,
+    .video__fullscreen:hover .video__fullscreen-icon path,
+    .video__fullscreen:focus .video__fullscreen-icon path {
+      fill: @basic-color;
+      opacity: 0.6;
+    }
+
+    .video__replay:active .video__replay-icon path,
+    .video__subtitles:active .video__subtitles-icon path,
+    .video__fullscreen:active .video__fullscreen-icon path {
+      fill: @basic-color;
+      opacity: 0.3;
+    }
+  }
+
   .video__wrapper-part {
     width: 648px;
   }
@@ -171,5 +200,52 @@
     width: 648px;
     margin: 0 auto;
     height: 547px;
+    background-image: url('../img/video-desktop.jpg');
+    background-size: 800px 500px;
+    background-position: 50% 48px;
+    background-repeat: no-repeat;
+  }
+
+  .video__toggle {
+    margin-left: 29%;
+  }
+
+  .video__replay {
+    left: 10px;
+    bottom: 13px;
+  }
+
+  .video__subtitles {
+    right: 84px;
+    bottom: 13px;
+  }
+
+  .video__fullscreen {
+    right: 20px;
+    bottom: 13px;
+    position: absolute;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video__wrapper-part:nth-of-type(2) {
+    width: 800px;
+  }
+
+  .video {
+    padding-top: 37px;
+    padding-bottom: 85px;
+  }
+
+  .video__frame {
+    width: 800px;
+  }
+
+  .video__description {
+    margin-bottom: 32px;
+  }
+
+  .video__toggle {
+    margin-left: 21%;
   }
 }
