@@ -1,39 +1,63 @@
 .popup-failure {
-  padding-top: 40px;
-  padding-bottom: 35px;
+  .modal-window();
+  box-sizing: border-box;
+
+  &__modal {
+    .modal();
+
+    @media (min-width: @tablet-width) {
+      width: 400px;
+      min-height: 347px;
+    }
+  }
 
   &__wrapper {
     .container();
+    width: 215px;
+    padding-top: 23px;
+    padding-bottom: 15px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: column;
 
     @media (min-width: @tablet-width) {
-      width: 272px;
+      width: 280px;
+      padding-top: 25px;
     }
   }
 
   &__title {
     .title();
     text-align: center;
+    margin-bottom: 12px;
 
     @media (min-width: @tablet-width) {
       font-size: 30px;
+      padding: 0 20px;
+      line-height: 40px;
     }
   }
 
   &__message {
     .popup-text();
+    margin-bottom: 22px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 37px;
+    }
   }
 
   &__close {
     .button();
-    width: 60%;
+    margin: 0 auto;
+    min-width: 180px;
+    padding-top: 4px;
 
     @media (min-width: @tablet-width) {
       font-size: 21px;
       margin: 0 auto;
+      min-width: 272px;
     }
   }
 }
