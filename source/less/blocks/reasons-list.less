@@ -2,9 +2,36 @@
   .list();
 
   &__photo {
-    .image();
     width: 100%;
-    height: max-content;
+    height: 260px;
+  }
+
+  &__photo--1 {
+    background: url("../img/photo-city.jpg") no-repeat 50% 50%;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/photo-city@2x.jpg") no-repeat 50% 50%;
+      background-size: cover;
+    }
+  }
+
+  &__photo--2 {
+    background: url("../img/photo-bridge.jpg") no-repeat 50% 50%;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/photo-bridge@2x.jpg") no-repeat 50% 50%;
+      background-size: cover;
+    }
+
+    @media (min-width: @tablet-width) {
+      background-position: 50% 50%;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-position: 50% -13px;
+    }
   }
 }
 
@@ -12,6 +39,10 @@
   .reasons-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .reasons-list__photo {
+    height: 256px;
   }
 
   .reasons-list__item:nth-of-type(1) {

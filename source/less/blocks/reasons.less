@@ -1,14 +1,18 @@
 .reasons {
   position: relative;
-}
 
-.reasons::before {
-  content: "";
-  position: absolute;
-  top: -1px;
-  width: 100%;
-  height: 14px;
-  background-color: @highlight-color;
+  &::before {
+    content: "";
+    top: 0;
+    width: 100%;
+    height: 37px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../img/white-triangle.svg) no-repeat;
+    z-index: 1;
+    background-size: cover;
+    position: absolute;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -38,6 +42,12 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+  .reasons__extra-content {
+    min-height: 330px;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .reasons__wrapper {
     .container();
@@ -46,6 +56,6 @@
   .reasons__extra-content {
     background-color: @basic-color;
     .container();
-    min-height: 324px;
+    min-height: 328px;
   }
 }

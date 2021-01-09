@@ -35,7 +35,11 @@
               </ul>
               <div class="main-nav__menu-bar">
                 <a class="main-nav__logo">
-                  <img class="main-nav__logo-image" src="img/logotype.svg" alt="Логотип">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+                    <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+                    <img class="main-nav__logo-image" src="img/logotype.svg" alt="Логотип">
+                  </picture>
                 </a>
                 <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
               </div>
@@ -68,7 +72,8 @@
                   </p>
                 </div>
               </div>
-              <img class="reasons-list__photo" src="img/photo-city-mobile.jpg">
+              <div class="reasons-list__photo  reasons-list__photo--1">
+              </div>
               <div class="reasons__extra-content">
                 <div class="reasons__extra-wrapper">
                   <ul class="reasons__list features-list">
@@ -110,7 +115,8 @@
                   </p>
                 </div>
               </div>
-              <img class="reasons-list__photo" src="img/photo-bridge-mobile.jpg">
+              <div class="reasons-list__photo reasons-list__photo--2">
+              </div>
             </li>
             <li class="reasons-list__item">
               <div class="reason-header reason-header--brief">
