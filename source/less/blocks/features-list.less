@@ -21,6 +21,19 @@
     .features-list__text {
       margin-top: 17px;
     }
+
+    .features-list__name::before {
+      background: url("../img/icon-gift.svg") no-repeat;
+      width: 32px;
+      height: 38px;
+      left: -45px;
+      background-size: cover;
+
+      @media (min-width: @tablet-width) {
+        width: 64px;
+        height: 75px;
+      }
+    }
   }
 
   &__item {
@@ -31,32 +44,48 @@
     display: none;
   }
 
-  &__item::before {
+  &__name::before {
     content: "";
     position: absolute;
     top: -9px;
     left: -48px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 26px;
+      position: static;
+    }
   }
 
-  &__item:nth-of-type(1)::before {
-    background: url("../img/icon-house.svg");
-    width: 39px;
-    height: 36.83px;
+  &__item:nth-of-type(1) {
+    .features-list__name::before {
+      background: url("../img/icon-house.svg") no-repeat;
+      width: 39px;
+      height: 36.83px;
+      background-size: cover;
+
+      @media (min-width: @tablet-width) {
+        width: 75px;
+        height: 72px;
+        margin-top: 3px;
+      }
+    }
   }
 
-  &__item:nth-of-type(2)::before {
-    background: url("../img/icon-gift.svg");
-    width: 32px;
-    height: 38px;
-    left: -45px;
-  }
+  &__item:nth-of-type(3) {
+    .features-list__name::before {
+      background: url("../img/icon-burger.svg") no-repeat;
+      width: 40px;
+      height: 34.9px;
+      top: -5px;
+      left: -52px;
+      background-size: cover;
 
-  &__item:nth-of-type(3)::before {
-    background: url("../img/icon-burger.svg");
-    width: 40px;
-    height: 34.9px;
-    top: -5px;
-    left: -52px;
+      @media (min-width: @tablet-width) {
+        width: 76px;
+        height: 67.9px;
+        margin-top: 8px;
+      }
+    }
   }
 
   @media (max-width: @mobile-width-only) {
@@ -66,7 +95,8 @@
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 9%;
-    padding-top: 153px;
+    padding-top: 56px;
+    padding-bottom: 15px;
 
     &__wrapper {
       width: 193px;
@@ -79,6 +109,9 @@
       line-height: 26px;
       font-weight: bold;
       margin-bottom: 23px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     &__text {
@@ -107,13 +140,17 @@
 
   @media (min-width: @desktop-width) {
     grid-column-gap: 85px;
-    padding-top: 153px;
+    padding-top: 56px;
 
     &__item {
       width: 299px;
       padding-left: 0;
       padding-right: 0;
       box-sizing: border-box;
+    }
+
+    &__name {
+      margin-bottom: 25px;
     }
 
     &__wrapper {
@@ -146,10 +183,6 @@
 
     &__text {
       font-size: 14px;
-    }
-
-    &__name {
-      margin-bottom: 25px;
     }
   }
 }
