@@ -43,9 +43,13 @@
     margin: 0 auto;
     display: block;
     position: relative;
-    background-image: url("../img/video-desktop.jpg");
+    background: url("../img/video-desktop.jpg"), @background-color;
     background-size: cover;
     height: 201px;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/video-desktop@2x.jpg"), @background-color;
+    }
   }
 
   &__controls {

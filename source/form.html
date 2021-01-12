@@ -13,7 +13,7 @@
           <nav class="main-nav main-nav--closed main-nav--nojs">
             <div class="main-nav__wrapper">
               <ul class="main-nav__list">
-                <li class="main-nav__item main-nav__item--active">
+                <li class="main-nav__item">
                   <a class="main-nav__link" href="index.html">
                     Главная
                   </a>
@@ -23,7 +23,7 @@
                     Фото и видео
                   </a>
                 </li>
-                <li class="main-nav__item">
+                <li class="main-nav__item main-nav__item--active">
                   <a class="main-nav__link" href="#">
                     Форма отзыва
                   </a>
@@ -36,13 +36,17 @@
               </ul>
               <div class="main-nav__menu-bar">
                 <a class="main-nav__logo">
-                  <img class="main-nav__logo-image" src="img/logotype.svg" alt="Логотип">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+                    <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+                    <img class="main-nav__logo-image" src="img/logotype.svg" alt="Логотип">
+                  </picture>
                 </a>
                 <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
               </div>
             </div>
           </nav>
-          <div class="page-header__container">
+          <div class="page-header__container page-header__container--form">
           </div>
         </div>
       </header>
