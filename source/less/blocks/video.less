@@ -34,7 +34,7 @@
 
     @media (min-width: @tablet-width) {
       margin-top: 33px;
-      margin-bottom: 33px;
+      margin-bottom: 80px;
     }
   }
 
@@ -43,9 +43,14 @@
     margin: 0 auto;
     display: block;
     position: relative;
-    background-image: url("../img/video-desktop.jpg");
+    background: url("../img/video-desktop.jpg"), @background-color;
     background-size: cover;
     height: 201px;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/video-desktop@2x.jpg"), @background-color;
+      background-size: cover;
+    }
   }
 
   &__controls {
@@ -191,10 +196,10 @@
   .video__frame {
     width: 648px;
     margin: 0 auto;
-    height: 547px;
+    height: 500px;
     background-image: url("../img/video-desktop.jpg");
-    background-size: 800px 500px;
-    background-position: 50% 48px;
+    background-size: cover;
+    background-position: 50% 50%;
     background-repeat: no-repeat;
   }
 
@@ -234,7 +239,7 @@
   }
 
   .video__description {
-    margin-bottom: 32px;
+    margin-bottom: 79px;
   }
 
   .video__toggle {

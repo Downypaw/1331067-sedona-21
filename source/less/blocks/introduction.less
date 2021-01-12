@@ -1,6 +1,6 @@
 .introduction {
   border-color: @basic-color;
-  padding-top: 30px;
+  padding-top: 32px;
 }
 
 .introduction__wrapper {
@@ -26,6 +26,7 @@
   text-align: center;
   line-height: 24px;
   text-transform: uppercase;
+  margin-bottom: 12px;
 
   &--main-page {
     line-height: 26px;
@@ -35,7 +36,8 @@
 @media (min-width: @tablet-width) {
   .introduction {
     background-image: none;
-    padding-bottom: 40px;
+    padding-bottom: 42px;
+    padding-top: 42px;
   }
 
   .introduction__title {
@@ -44,7 +46,6 @@
 
   .introduction__wrapper {
     width: 520px;
-    margin-top: 12px;
   }
 }
 
@@ -52,7 +53,8 @@
   .introduction {
     background-color: @basic-color;
     .container();
-    padding-bottom: 28px;
+    padding-bottom: 31px;
+    padding-top: 31px;
   }
 
   .introduction__wrapper {
@@ -64,7 +66,7 @@
   }
 
   .introduction__text {
-    margin-top: 32px;
+    margin-top: 30px;
   }
 }
 
@@ -73,7 +75,7 @@
   border-bottom: 1px solid @border-form-color;
   padding-top: 35px;
   background: none;
-  padding-bottom: 2px;
+  padding-bottom: 5px;
 
   .introduction__title {
     margin-right: 0;
@@ -82,7 +84,7 @@
   @media (min-width: @tablet-width) {
     border-bottom: none;
     margin-bottom: 60px;
-    padding-top: 51px;
+    padding-top: 62px;
 
     .introduction__title {
       font-size: 30px;
@@ -123,24 +125,25 @@
   @media (min-width: @desktop-width) {
     padding-top: 89px;
     padding-bottom: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 23px;
   }
 }
 
 .introduction--catalog {
   background-image: none;
   padding-bottom: 17px;
-  border-bottom: none;
+  border-bottom: 1px solid @input-color;
   padding-top: 31px;
 
   .introduction__text {
-    margin-top: 28px;
+    margin-top: 29px;
   }
 
   @media (min-width: @tablet-width) {
-    padding-top: 53px;
+    padding-top: 65px;
     padding-bottom: 40px;
-    margin-bottom: 23px;
+    margin-bottom: 25px;
+    border-bottom: none;
 
     .introduction__text {
       margin-top: 33px;
@@ -166,7 +169,7 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 77px;
-    margin-bottom: 25px;
+    margin-bottom: 27px;
 
     .introduction__title {
       font-size: 30px;
