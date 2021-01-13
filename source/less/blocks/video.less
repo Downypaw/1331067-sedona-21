@@ -2,6 +2,12 @@
   position: relative;
   padding-top: 17px;
 
+  .video__replay-icon,
+  .video__subtitles-icon,
+  .video__fullscreen-icon {
+    fill: @video-icon-color-mobile;
+  }
+
   @media (min-width: @tablet-width) {
     padding-top: 32px;
   }
@@ -125,18 +131,18 @@
     height: 66px;
   }
 
-  .video__replay:hover .video__replay-icon path,
-  .video__subtitles:hover .video__subtitles-icon path,
-  .video__fullscreen:hover .video__fullscreen-icon path,
-  .video__replay:focus .video__replay-icon path,
-  .video__subtitles:focus .video__subtitles-icon path,
-  .video__fullscreen:focus .video__fullscreen-icon path {
+  .video__replay:hover .video__replay-icon,
+  .video__subtitles:hover .video__subtitles-icon,
+  .video__fullscreen:hover .video__fullscreen-icon,
+  .video__replay:focus .video__replay-icon,
+  .video__subtitles:focus .video__subtitles-icon,
+  .video__fullscreen:focus .video__fullscreen-icon {
     fill: @text-color;
   }
 
-  .video__replay:active .video__replay-icon path,
-  .video__subtitles:active .video__subtitles-icon path,
-  .video__fullscreen:active .video__fullscreen-icon path {
+  .video__replay:active .video__replay-icon,
+  .video__subtitles:active .video__subtitles-icon,
+  .video__fullscreen:active .video__fullscreen-icon {
     fill: @text-color;
     opacity: 0.3;
   }
@@ -160,25 +166,25 @@
   .video {
     padding-bottom: 40px;
 
-    .video__replay-icon path,
-    .video__subtitles-icon path,
-    .video__fullscreen-icon path {
+    .video__replay-icon,
+    .video__subtitles-icon,
+    .video__fullscreen-icon {
       fill: @basic-color;
     }
 
-    .video__replay:hover .video__replay-icon path,
-    .video__replay:focus .video__replay-icon path,
-    .video__subtitles:hover .video__subtitles-icon path,
-    .video__subtitles:focus .video__subtitles-icon path,
-    .video__fullscreen:hover .video__fullscreen-icon path,
-    .video__fullscreen:focus .video__fullscreen-icon path {
+    .video__replay:hover .video__replay-icon,
+    .video__replay:focus .video__replay-icon,
+    .video__subtitles:hover .video__subtitles-icon,
+    .video__subtitles:focus .video__subtitles-icon,
+    .video__fullscreen:hover .video__fullscreen-icon,
+    .video__fullscreen:focus .video__fullscreen-icon {
       fill: @basic-color;
       opacity: 0.6;
     }
 
-    .video__replay:active .video__replay-icon path,
-    .video__subtitles:active .video__subtitles-icon path,
-    .video__fullscreen:active .video__fullscreen-icon path {
+    .video__replay:active .video__replay-icon,
+    .video__subtitles:active .video__subtitles-icon,
+    .video__fullscreen:active .video__fullscreen-icon {
       fill: @basic-color;
       opacity: 0.3;
     }
@@ -197,10 +203,15 @@
     width: 648px;
     margin: 0 auto;
     height: 500px;
-    background-image: url("../img/video-desktop.jpg");
+    background: url("../img/video-desktop.jpg"), @background-color;
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/video-desktop@2x.jpg"), @background-color;
+      background-size: cover;
+    }
   }
 
   .video__toggle {

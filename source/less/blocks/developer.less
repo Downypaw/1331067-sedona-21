@@ -20,14 +20,15 @@
   display: inline-block;
   vertical-align: middle;
   margin-left: 9px;
+  fill: @text-bold-color;
 }
 
-.developer:hover .developer__logo path,
-.developer:focus-within .developer__logo path {
+.developer:hover .developer__logo,
+.developer:focus-within .developer__logo {
   fill: @highlight-color;
 }
 
-.developer:active .developer__logo path {
+.developer:active .developer__logo {
   fill: @text-bold-color;
   opacity: 0.3;
 }
