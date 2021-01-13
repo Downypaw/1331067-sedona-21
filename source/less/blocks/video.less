@@ -203,10 +203,15 @@
     width: 648px;
     margin: 0 auto;
     height: 500px;
-    background-image: url("../img/video-desktop.jpg");
+    background: url("../img/video-desktop.jpg"), @background-color;
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/video-desktop@2x.jpg"), @background-color;
+      background-size: cover;
+    }
   }
 
   .video__toggle {
