@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin>
     <title>Страница с фото и видео</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
     <div class="page__body-wrapper">
@@ -172,7 +174,7 @@
               <div class="video__controls">
                 <button class="video__replay">
                   <svg class="video__replay-icon" aria-label="Перезапуск видео" xmlns="http://www.w3.org/2000/svg" width="16" height="20" fill="none">
-                    <use xlink:href="img/sprite.svg#replay-icon"></use>
+                    <use xlink:href="img/sprite.svg#replay"></use>
                   </svg>
                 </button>
                   <div class="video__range">
@@ -183,12 +185,12 @@
                   </div>
                 <button class="video__subtitles">
                   <svg class="video__subtitles-icon" aria-label="Субтитры" xmlns="http://www.w3.org/2000/svg" width="32" height="20" viewBox="0 0 32 20" fill="none">
-                    <use xlink:href="img/sprite.svg#subtitles-icon"></use>
+                    <use xlink:href="img/sprite.svg#subtitles"></use>
                   </svg>
                 </button>
                 <button class="video__fullscreen">
                   <svg class="video__fullscreen-icon" aria-label="Полноэкранный режим" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <use xlink:href="img/sprite.svg#fullscreen-icon"></use>
+                    <use xlink:href="img/sprite.svg#fullscreen"></use>
                   </svg>
                 </button>
               </div>
@@ -217,12 +219,12 @@
           <a class="developer" href="https://htmlacademy.ru/intensive/adaptive">
             Разработано <span class="visually-hidden">Html Academy</span>
             <svg class="developer__logo" aria-label="Логотип компании-разработчика дизайна сайта" xmlns="http://www.w3.org/2000/svg" width="27" height="35" fill="none">
-              <use xlink:href="img/sprite.svg#developer-logo"></use>
+              <use xlink:href="img/sprite.svg#htmlacademy"></use>
             </svg>
           </a>
         </div>
       </footer>
     </div>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
