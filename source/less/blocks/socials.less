@@ -4,10 +4,6 @@
   flex-wrap: wrap;
   flex-direction: row;
   margin-left: -1px;
-
-  @media (min-width: @tablet-width) {
-    margin-right: 10px;
-  }
 }
 
 .socials__link {
@@ -67,4 +63,10 @@
 .socials__link--facebook:active::before,
 .socials__link--youtube:active::before {
   opacity: 0.3;
+}
+
+@media (min-width: @tablet-width) {
+  .socials__list {
+    margin-right: 10px;
+  }
 }

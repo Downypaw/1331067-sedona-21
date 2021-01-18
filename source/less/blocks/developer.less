@@ -10,10 +10,6 @@
   margin: 0;
   margin-top: 35px;
   text-decoration: none;
-
-  @media (min-width: @tablet-width) {
-    margin-top: 0;
-  }
 }
 
 .developer__logo {
@@ -31,4 +27,10 @@
 .developer:active .developer__logo {
   fill: @text-bold-color;
   opacity: 0.3;
+}
+
+@media (min-width: @tablet-width) {
+  .developer {
+    margin-top: 0;
+  }
 }

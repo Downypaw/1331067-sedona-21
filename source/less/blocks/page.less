@@ -12,13 +12,15 @@
   color: @text-color;
   background-color: @basic-color;
   min-width: 320px;
+}
 
-  @media (min-width: @desktop-width) {
+@media (min-width: @desktop-width) {
+  .page__body {
     background-color: @input-color;
+  }
 
-    .page__body-wrapper {
-      .container();
-      box-shadow: 0 5px 15px fade(@modal-shadow-color, 20%);
-    }
+  .page__body-wrapper {
+    .container();
+    box-shadow: 0 5px 15px fade(@modal-shadow-color, 20%);
   }
 }
