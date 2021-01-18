@@ -99,3 +99,25 @@
     grid-column-end: 3;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .reasons-list__photo--1 {
+    background: url("../img/photo-city-desktop.jpg") no-repeat 50% 50%, @background-color;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/photo-city-desktop@2x.jpg") no-repeat 50% 50%, @background-color;
+      background-size: cover;
+    }
+  }
+
+  .reasons-list__photo--2 {
+    background: url("../img/photo-bridge-desktop.jpg") no-repeat 50% 50%, @background-color;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/photo-bridge-desktop@2x.jpg") no-repeat 50% 50%, @background-color;
+      background-size: cover;
+    }
+  }
+}
