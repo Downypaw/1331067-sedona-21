@@ -1,48 +1,48 @@
 .reasons-list {
   .list();
+}
 
-  &__photo {
-    width: 100%;
-    height: 260px;
+.reasons-list__photo {
+  width: 100%;
+  min-height: 260px;
+}
+
+.reasons-list__photo--1 {
+  background: url("../img/photo-city-tablet.jpg") no-repeat 50% 50%, @background-color;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background: url("../img/photo-city-tablet@2x.jpg") no-repeat 50% 50%, @background-color;
+    background-size: cover;
   }
 
-  &__photo--1 {
-    background: url("../img/photo-city-tablet.jpg") no-repeat 50% 50%, @background-color;
+  @media (min-width: @desktop-width) {
+    background: url("../img/photo-city-desktop.jpg") no-repeat 50% 50%, @background-color;
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
-      background: url("../img/photo-city-tablet@2x.jpg") no-repeat 50% 50%, @background-color;
+      background: url("../img/photo-city-desktop@2x.jpg") no-repeat 50% 50%, @background-color;
       background-size: cover;
-    }
-
-    @media (min-width: @desktop-width) {
-      background: url("../img/photo-city-desktop.jpg") no-repeat 50% 50%, @background-color;
-      background-size: cover;
-
-      @media (min-resolution: 2dppx) {
-        background: url("../img/photo-city-desktop@2x.jpg") no-repeat 50% 50%, @background-color;
-        background-size: cover;
-      }
     }
   }
+}
 
-  &__photo--2 {
-    background: url("../img/photo-bridge-tablet.jpg") no-repeat 50% 50%, @background-color;
+.reasons-list__photo--2 {
+  background: url("../img/photo-bridge-tablet.jpg") no-repeat 50% 50%, @background-color;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background: url("../img/photo-bridge-tablet@2x.jpg") no-repeat 50% 50%, @background-color;
+    background-size: cover;
+  }
+
+  @media (min-width: @desktop-width) {
+    background: url("../img/photo-bridge-desktop.jpg") no-repeat 50% 50%, @background-color;
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
-      background: url("../img/photo-bridge-tablet@2x.jpg") no-repeat 50% 50%, @background-color;
+      background: url("../img/photo-bridge-desktop@2x.jpg") no-repeat 50% 50%, @background-color;
       background-size: cover;
-    }
-
-    @media (min-width: @desktop-width) {
-      background: url("../img/photo-bridge-desktop.jpg") no-repeat 50% 50%, @background-color;
-      background-size: cover;
-
-      @media (min-resolution: 2dppx) {
-        background: url("../img/photo-bridge-desktop@2x.jpg") no-repeat 50% 50%, @background-color;
-        background-size: cover;
-      }
     }
   }
 }
@@ -54,7 +54,7 @@
   }
 
   .reasons-list__photo {
-    height: 256px;
+    min-height: 256px;
   }
 
   .reasons-list__item:nth-of-type(1) {
